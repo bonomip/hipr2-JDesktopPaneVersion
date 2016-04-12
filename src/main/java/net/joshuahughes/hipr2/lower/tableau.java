@@ -527,7 +527,7 @@ public class tableau extends JApplet {
     JMenuItem imageLoadMenuItem = new JMenuItem("ImageLoad");
     imageLoadMenuItem. addActionListener(new ActionListener(){
       public void actionPerformed(ActionEvent e){
-	imageLoad op1 = new imageLoad(panel,links,tableaudocbase);
+	imageLoad op1 = new imageLoad(panel,links);
       }
     });
     
