@@ -284,7 +284,7 @@ System.out.println("mouse press: "+((operatorBox) connection.getParent().getPare
     public void mouseClicked(MouseEvent e){
       if(SwingUtilities.isLeftMouseButton(e)){
 	//representsOperator.getParameters().setVisible(true);
-	DesktopTest.setFrame("some",representsOperator.getParameters().getContentPane());
+	DesktopTest.setFrame(representsOperator.getName(),representsOperator.getParameters().getContentPane());
 	representsOperator.getParameters().setState(Frame.NORMAL);
 	Iterator it = boxes.iterator();
 	while(it.hasNext()){
