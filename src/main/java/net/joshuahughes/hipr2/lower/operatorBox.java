@@ -4,8 +4,12 @@ import java.awt.color.*;
 import java.awt.*;
 import java.util.*;
 import java.awt.event.*;
+
 import javax.swing.*;
 import javax.swing.event.*;
+
+import GUI.DesktopTest;
+
 import java.awt.event.*;
 import java.lang.*;
 
@@ -95,6 +99,7 @@ public class operatorBox extends JPanel{
     validate();
     setVisible(true);
     panel.setVisible(true);
+    //DesktopTest.setFrame(this.getName(),panel);
   }
 
   public JLabel getIn1(){
@@ -278,7 +283,8 @@ System.out.println("mouse press: "+((operatorBox) connection.getParent().getPare
 
     public void mouseClicked(MouseEvent e){
       if(SwingUtilities.isLeftMouseButton(e)){
-	representsOperator.getParameters().setVisible(true);
+	//representsOperator.getParameters().setVisible(true);
+	DesktopTest.setFrame("some",representsOperator.getParameters().getContentPane());
 	representsOperator.getParameters().setState(Frame.NORMAL);
 	Iterator it = boxes.iterator();
 	while(it.hasNext()){

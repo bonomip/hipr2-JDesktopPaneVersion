@@ -7,6 +7,7 @@ import java.awt.event.*;
 //Java extension packages   
 import javax.swing.*;
 
+import net.joshuahughes.hipr2.upper.ThetaInterface;
 import NewObject.GUITotInternal;   
 
 public class DesktopTest extends JFrame {   
@@ -14,7 +15,7 @@ public class DesktopTest extends JFrame {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-private JDesktopPane theDesktop;   
+	private static JDesktopPane theDesktop;   
 
 // set up GUI   
 public DesktopTest()   
@@ -88,7 +89,31 @@ public static void main( String args[] )
    application.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE );
    
    application.setExtendedState(JFrame.MAXIMIZED_BOTH);
-}   
+}
+//public static void setFrame(JInternalFrame f){
+//	Container container = f.getContentPane();
+//	theDesktop.add(container);
+//	container.setVisible(true);
+//}
+
+public static void setFrame(String name ,Container container){
+	JInternalFrame f = new JInternalFrame(name, true, true, true, true);
+	//f.setContentPane(container);
+	f.getContentPane().add(container);
+	Container c = f.getContentPane(); 
+	f.pack();
+	theDesktop.add(f);
+	f.setVisible(true);
+}
+public static void setFrame(String name ,JPanel container){
+	JInternalFrame f = new JInternalFrame(name, true, true, true, true);
+	//f.setContentPane(container);
+	f.getContentPane().add(container);
+	Container c = f.getContentPane(); 
+	f.pack();
+	theDesktop.add(f);
+	f.setVisible(true);
+}
 
 }  // end class DesktopTest   
 

@@ -13,6 +13,8 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
+import GUI.DesktopTest;
+import NewObject.GUITotInternal;
 import net.joshuahughes.hipr2.upper.ImageAnd;
 
 
@@ -176,10 +178,12 @@ public class and extends operator1DInt{
     panel. add(operatorLabel);
     panel. add(operatorBox);
     panel. add(applyButton);
-
+    
     parameters.getContentPane().add(panel);
     parameters.pack();
     parameters.setVisible(false);
+    
+   // DesktopTest.setFrame(this.getName(),parameters.getContentPane());
   }
 
   public void go(){
