@@ -3,7 +3,6 @@ package NewObject;
 
 import java.net.URL;
 
-import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JInternalFrame;
 import javax.swing.JPanel;
@@ -43,6 +42,8 @@ import net.joshuahughes.hipr2.lower.*;
 
 public class GUITotInternal extends JFrame implements Serializable{
 
+	private static final long serialVersionUID = 1L;
+	
 	static JInternalFrame frame;
 	private static JPanel panel;
 	static JScrollPane scroll;
