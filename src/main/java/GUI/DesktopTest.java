@@ -12,8 +12,10 @@ import java.io.ObjectInputStream;
 
 
 
+
 //Java extension packages   
 import javax.swing.*;
+import javax.swing.filechooser.FileNameExtensionFilter;
 
 import NewObject.GUITotInternal;   
 
@@ -65,7 +67,13 @@ public DesktopTest()
 			   public void actionPerformed( ActionEvent event ) {
 				   ObjectInputStream stream;
 				try {
-					stream = new ObjectInputStream(new FileInputStream("test.t"));
+					JFileChooser chooser = new JFileChooser();
+					chooser.removeChoosableFileFilter(chooser.getFileFilter());
+		   			chooser.addChoosableFileFilter(new FileNameExtensionFilter("HIPR2 ( *.HIPR2 )", "HIPR2"));
+		   			
+		   			chooser.showOpenDialog(null);
+					
+					stream = new ObjectInputStream(new FileInputStream(chooser.getSelectedFile()));
 					GUITotInternal g = (GUITotInternal) stream.readObject();
 					stream.close();
 					

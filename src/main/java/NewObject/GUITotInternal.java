@@ -26,11 +26,15 @@ import java.net.MalformedURLException;
 
 
 
+
+
+import javax.swing.JFileChooser;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 import javax.swing.JTextArea;
+import javax.swing.filechooser.FileNameExtensionFilter;
 
 import GUI.fileIOInternal;
 import net.joshuahughes.hipr2.lower.*;
@@ -139,37 +143,42 @@ public void setupMenuBar(){
 	    JMenuItem fileSaveMenuItem = new JMenuItem("Save");
 	    fileSaveMenuItem. addActionListener(new ActionListener(){
 	      public void actionPerformed(ActionEvent e){
-	    	 /* 
+	    	 
 	    	  JFileChooser chooser = new JFileChooser();
 				//Set estensione
 				chooser.removeChoosableFileFilter(chooser.getFileFilter());
-	   			//chooser.addChoosableFileFilter(new FileNameExtensionFilter("Grimorio ( *.grimorio )", "grimorio"));
+	   			chooser.addChoosableFileFilter(new FileNameExtensionFilter("HIPR2 ( *.HIPR2 )", "HIPR2"));
 	   			
 	   			//set nome di base
 	   			//FileNameExtensionFilter extensionFile = (FileNameExtensionFilter) chooser.getFileFilter();
-	   		    chooser.setSelectedFile(new File("nuovo"));
+	   		    chooser.setSelectedFile(new File("nuovo.HIPR2"));
 				
 				chooser.showSaveDialog(null);
 				
 				File f = chooser.getSelectedFile();
-	    	  */	
-				//salva
-	    	  
 	    	  	
+				//salva
 	    	  	try {
-					salva(new File("test.t"));
+					salva(f);
+					JOptionPane.showMessageDialog(getContentPane()
+							, "Operazione effettuata con successo", "Working in progress"
+							,JOptionPane.INFORMATION_MESSAGE);
 				} catch (FileNotFoundException e1) {
+					JOptionPane.showMessageDialog(getContentPane()
+							, "Operazione Fallita", "Working in progress"
+							,JOptionPane.INFORMATION_MESSAGE);
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				} catch (IOException e1) {
+					JOptionPane.showMessageDialog(getContentPane()
+							, "Operazione Fallita", "Working in progress"
+							,JOptionPane.INFORMATION_MESSAGE);
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
 	    	  	
 	    	  	
-				JOptionPane.showMessageDialog(getContentPane()
-						, "Operazione Non ancora Implementata", "Working in progress"
-						,JOptionPane.INFORMATION_MESSAGE);
+				
 	    	  
 	      }
 	    });
