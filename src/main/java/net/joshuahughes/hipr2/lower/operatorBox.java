@@ -31,6 +31,9 @@ public class operatorBox extends JPanel{
     boxes.add(this);
     this.links = links;
     representsOperator = represents;
+    
+    representsOperator.setP(new JInternalFrame(representsOperator.getName(), true, true, true, true));
+    
     boxListener listener = new boxListener();
     linkListener linklistener = new linkListener();
 
@@ -284,8 +287,11 @@ System.out.println("mouse press: "+((operatorBox) connection.getParent().getPare
     public void mouseClicked(MouseEvent e){
       if(SwingUtilities.isLeftMouseButton(e)){
 	//representsOperator.getParameters().setVisible(true);
-	DesktopTest.setFrame(representsOperator.getName(),representsOperator.getParameters().getContentPane());
-	representsOperator.getParameters().setState(Frame.NORMAL);
+	//representsOperator.setP(DesktopTest.setFrame(representsOperator.getName(),representsOperator.getParameters()));
+	
+    representsOperator.getP().setVisible(true);	  
+    
+    representsOperator.getParameters().setState(Frame.NORMAL);
 	Iterator it = boxes.iterator();
 	while(it.hasNext()){
 	  operatorBox box = (operatorBox) it.next();

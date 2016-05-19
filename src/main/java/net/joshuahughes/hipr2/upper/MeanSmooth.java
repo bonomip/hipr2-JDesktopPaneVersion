@@ -1,13 +1,6 @@
 package net.joshuahughes.hipr2.upper;
 
-import java.applet.*;
 import java.awt.*;
-import java.awt.image.*;
-import java.net.*;
-import java.util.*;
-import java.io.*;
-import java.lang.Math;
-import java.awt.Color.*;
 
 /**
  * MeanSmooth is an algorithm to meany smooth a binary image 
@@ -138,7 +131,7 @@ public class MeanSmooth extends Thread {
     int [][] outputArrays = new int [width][height];
     for(int j=0;j<3;++j){
       for(int i=0;i<3;++i){
-	kernelArrays[i][j] = kernel[j*3 +i];
+    	  kernelArrays[i][j] = kernel[j*3 +i];
       }
     }
     inputArrays = generateInputArrays(input,width,height);
@@ -165,27 +158,28 @@ public class MeanSmooth extends Thread {
       int [][] kernelArrays = new int [3][3];
       int [][] outputArrays = new int [width][height];
       for(int j=0;j<kernelHeight;++j){
-	for(int i=0;i<kernelWidth;++i){
-	  int k = kernel[j*kernelWidth +i];
-	  //System.out.println(k);
-	  if(k>128){
-	    k=1;
-	  }else{
-	    k=0;
-	  }
-	  kernelArrays[i][j] = k;
-	}
+		for(int i=0;i<kernelWidth;++i){
+		  int k = kernel[j*kernelWidth +i];
+		 // System.out.println(k);
+		  if(k>0){ //k > 128
+		    k=1;
+		  }else{
+		    k=0;
+		  }
+		  kernelArrays[i][j] = k;
+		}
       }
       for(int j=0;j<height;++j){
-	for(int i=0;i<width;++i){
-	  inputArrays[i][j] = input[j*width+i];
-	}
+		for(int i=0;i<width;++i){
+		  inputArrays[i][j] = input[j*width+i];
+		 // System.out.println(inputArrays[i][j]+"");
+		}
       }
       outputArrays = smooth(inputArrays,kernelArrays,width,height,iterations);
       for(int j=0;j<height;++j){
-	for(int i=0;i<width;++i){
-	  outputArray[j*width+i] = outputArrays[i][j];
-	}
+		for(int i=0;i<width;++i){
+		  outputArray[j*width+i] = outputArrays[i][j];
+		}
       }
     }else{
       outputArray = (int []) input.clone();

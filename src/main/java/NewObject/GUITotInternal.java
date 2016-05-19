@@ -44,21 +44,22 @@ public class GUITotInternal extends JFrame implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 	
-	static JInternalFrame frame;
-	private static JPanel panel;
-	static JScrollPane scroll;
-	static linkData links;
-	static fileIOInternal loadSave;
-	String s = "http://homepages.inf.ed.ac.uk/rbf/HIPR2/images/air1.gif";
-	URL tableaudocbase;    
+	private JInternalFrame frame;
+	private JPanel panel;
+	private JScrollPane scroll;
+	private linkData links;
+	private fileIOInternal loadSave;
+	private String s = "http://homepages.inf.ed.ac.uk/rbf/HIPR2/images/air1.gif";
+	private URL tableaudocbase;    
 
 
 public GUITotInternal(){
+	frame = new JInternalFrame("Interactive Demo", true, true, true, true);
 	init();
 	setSize(800,600);
 }
 
-public static void setupFrame(){
+public void setupFrame(){
     frame = new JInternalFrame("Interactive Demo", true, true, true, true);
     /*frame.addWindowListener(new WindowAdapter() {
       public void windowClosing(WindowEvent e) {

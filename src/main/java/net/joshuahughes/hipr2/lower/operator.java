@@ -7,8 +7,12 @@ import java.awt.*;
 import java.util.*;
 import java.io.*;
 import java.awt.event.*;
+
 import javax.swing.*;
 import javax.swing.event.*;
+
+import GUI.DesktopTest;
+
 import java.awt.event.*;
 
 /**
@@ -103,10 +107,26 @@ public abstract class operator{
   /**
    * Lays out the parameters frame correctly.
    */
+ 
+  private JInternalFrame p;
+  public void setP(JInternalFrame frame){
+	  p = frame;
+	  DesktopTest.addFrame(p);
+	  p.setContentPane(parameters.getContentPane());
+	  p.setDefaultCloseOperation(WindowConstants.HIDE_ON_CLOSE);
+  }
+  public JInternalFrame getP(){
+	  return p;
+  }
+  
+  
   protected void updateParameters(){
     parameters.invalidate();
     parameters.validate();
     parameters.pack();
+    parameters.getContentPane().invalidate();
+
+    p.pack(); //per il JInternalFrame
   }
 
   /**

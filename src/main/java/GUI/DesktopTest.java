@@ -7,7 +7,6 @@ import java.awt.event.*;
 //Java extension packages   
 import javax.swing.*;
 
-import net.joshuahughes.hipr2.upper.ThetaInterface;
 import NewObject.GUITotInternal;   
 
 public class DesktopTest extends JFrame {   
@@ -61,7 +60,7 @@ public DesktopTest()
             JInternalFrame frame = new GUITotInternal().getFrame();
             
             // attach panel to internal frame content pane   
-            Container container = frame.getContentPane();     
+            //Container container = frame.getContentPane();     
 
             // set size internal frame to size of its contents   
             frame.pack();   
@@ -96,23 +95,39 @@ public static void main( String args[] )
 //	container.setVisible(true);
 //}
 
-public static void setFrame(String name ,Container container){
+public static JInternalFrame setFrame(String name ,Container container){
 	JInternalFrame f = new JInternalFrame(name, true, true, true, true);
 	//f.setContentPane(container);
 	f.getContentPane().add(container);
-	Container c = f.getContentPane(); 
+	//Container c = f.getContentPane(); 
 	f.pack();
 	theDesktop.add(f);
 	f.setVisible(true);
+	return f;
 }
-public static void setFrame(String name ,JPanel container){
+public static JInternalFrame setFrame(String name ,JPanel container){
 	JInternalFrame f = new JInternalFrame(name, true, true, true, true);
 	//f.setContentPane(container);
 	f.getContentPane().add(container);
-	Container c = f.getContentPane(); 
+	//Container c = f.getContentPane(); 
 	f.pack();
 	theDesktop.add(f);
 	f.setVisible(true);
+	return f;
+}
+//quello che uso
+public static JInternalFrame setFrame(String name ,JFrame container){
+	JInternalFrame f = new JInternalFrame(name, true, true, true, true);
+	//f.setContentPane(container);
+	f.getContentPane().add(container.getContentPane());
+	//Container c = f.getContentPane(); 
+	f.pack();
+	theDesktop.add(f);
+	f.setVisible(true);
+	return f;
+}
+public static void addFrame(JInternalFrame frame){
+	theDesktop.add(frame);
 }
 
 }  // end class DesktopTest   
