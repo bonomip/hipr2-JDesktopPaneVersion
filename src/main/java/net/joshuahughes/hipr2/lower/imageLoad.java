@@ -253,7 +253,7 @@ public class imageLoad extends operator1DInt{
    * Sets up the parameters for the new imageLoad operator.
    */
   void setParameters(){
-	scroll = new JScrollPane();//da usare
+	//da usare
 	
     loadButton = new JButton("Load image");
     loadText = new JTextField(file.getName(),20);
@@ -263,13 +263,15 @@ public class imageLoad extends operator1DInt{
 	loadImage(localdocbase);
 	go();
       }});
-
+    
     parameters = new JFrame(name);
     panel = new JPanel();
     midPanel = new JPanel();
     midPanel.setLayout(new BorderLayout());
     midPanel.add(position,"Center");
     midPanel.add(intensity,"South");
+    //scroll = new JScrollPane(midPanel);
+    //scroll.add(midPanel);
     bottomPanel = new JPanel();
     bottomPanel.add(loadButton);
     bottomPanel.add(loadText);
@@ -282,6 +284,7 @@ public class imageLoad extends operator1DInt{
     try {
         URL url = new URL(default_image);
         setImage(url);
+        
     }
      catch (MalformedURLException e4) {
               JOptionPane.showMessageDialog(null,("Can't find file images/brg1.GIF"),"Load Error", JOptionPane.WARNING_MESSAGE);
@@ -300,24 +303,39 @@ public class imageLoad extends operator1DInt{
 
     int width = imageIcon.getIconWidth();
     int height = imageIcon.getIconHeight();
-
-    int [] inputImage = new int [width*height];
+    
+    //scale
+	float Height = imageIcon.getIconHeight() ;
+	float Width = imageIcon.getIconWidth() ;
+	float NewHeight= Height*(185/Width);
+	float NewWidth=Width*(185/Height);
+	Image img = imageIcon.getImage();
+	if(Height<Width)
+		img = img.getScaledInstance(185, (int)NewHeight, 1);
+	else
+		img = img.getScaledInstance((int)NewWidth, 185, 1);
+	
+	NewHeight = new ImageIcon(img).getIconHeight();
+	NewWidth = new ImageIcon(img).getIconWidth();
+    //scroll.setSize(width, height);
+    
+    int [] inputImage = new int [((int)NewWidth)*((int)NewHeight)];
 
     // loads image - no exception catching apparently possible, thread just hangs if incorrectly non-esistent URL
-    PixelGrabber grabber = new PixelGrabber(imageIcon.getImage(),
+    PixelGrabber grabber = new PixelGrabber(img,
 					    0,0,
-					    width,
-					    height,
+					    (int)NewWidth,
+					    (int)NewHeight,
 					    inputImage,
-					    0,width);
+					    0,(int)NewWidth);
     try{
       grabber.grabPixels();
       for(int i=0;i<inputImage.length;++i){
 	int pixel = inputImage[i];
 	inputImage[i] = (new Color(pixel)).getRed();
       }
-      input1 = new image1DInt(width,
-			 height,
+      input1 = new image1DInt((int)NewWidth,
+			 (int)NewHeight,
 			 inputImage);
     }catch(InterruptedException e){
     }
