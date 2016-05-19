@@ -1,1 +1,2 @@
 1: if you open a JInternalFrame open yet, it do nothing. I want that it show to user it
+2: all object Must implements Serializable

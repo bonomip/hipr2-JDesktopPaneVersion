@@ -8,15 +8,11 @@ import javax.swing.JInternalFrame;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 
-
 import net.joshuahughes.hipr2.lower.linkData;
 
-
 import java.awt.Dimension;
-
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -29,12 +25,12 @@ import java.net.MalformedURLException;
 
 
 
+
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 import javax.swing.JTextArea;
-
 
 import GUI.fileIOInternal;
 import net.joshuahughes.hipr2.lower.*;
@@ -48,7 +44,7 @@ public class GUITotInternal extends JFrame implements Serializable{
 	private JPanel panel;
 	private JScrollPane scroll;
 	private linkData links;
-	private fileIOInternal loadSave;
+	//private fileIOInternal loadSave;
 	private String s = "http://homepages.inf.ed.ac.uk/rbf/HIPR2/images/air1.gif";
 	private URL tableaudocbase;    
 
@@ -109,8 +105,8 @@ public void setupMenuBar(){
 	    JMenuItem fileNewMenuItem = new JMenuItem("New");
 	    fileNewMenuItem. addActionListener(new ActionListener(){
 	      public void actionPerformed(ActionEvent e){
-		loadSave.clearSystem();
-		loadSave.resetFile();
+		//loadSave.clearSystem();
+		//loadSave.resetFile();
 	      }
 	    });
 	    
@@ -131,6 +127,7 @@ public void setupMenuBar(){
 				File f = chooser.getSelectedFile();
 	    	*/
 				//carica
+	    	 
 				JOptionPane.showMessageDialog(getContentPane()
 						, "Operazione Non ancora Implementata", "Working in progress"
 						,JOptionPane.INFORMATION_MESSAGE);
@@ -157,6 +154,19 @@ public void setupMenuBar(){
 				File f = chooser.getSelectedFile();
 	    	  */	
 				//salva
+	    	  
+	    	  	
+	    	  	try {
+					salva(new File("test.t"));
+				} catch (FileNotFoundException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+	    	  	
+	    	  	
 				JOptionPane.showMessageDialog(getContentPane()
 						, "Operazione Non ancora Implementata", "Working in progress"
 						,JOptionPane.INFORMATION_MESSAGE);
@@ -249,14 +259,14 @@ public void setupMenuBar(){
 	    JMenuItem divisionMenuItem = new JMenuItem("Image Division");
 	    divisionMenuItem. addActionListener(new ActionListener(){
 	      public void actionPerformed(ActionEvent e){
-		division op1 = new division(panel, links);
+	    	  division op1 = new division(panel, links);
 	      }
 	    });
 
 	    JMenuItem blendingMenuItem = new JMenuItem("Image Blending");
 	    blendingMenuItem. addActionListener(new ActionListener(){
 	      public void actionPerformed(ActionEvent e){
-		blending op1 = new blending(panel, links);
+	    	  blending op1 = new blending(panel, links);
 	      }
 	    });
 
@@ -823,7 +833,7 @@ public void setupMenuBar(){
 	    setupFrame();
 	    setupMenuBar();
 	    links = new linkData(panel);
-	    loadSave = new fileIOInternal(operatorBox.getBoxes(),links,frame);
+	   // loadSave = new fileIOInternal(operatorBox.getBoxes(),links,frame);
 	    //frame.setVisible(true);
 	    
 	  }

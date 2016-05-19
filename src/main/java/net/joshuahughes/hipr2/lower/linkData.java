@@ -4,20 +4,21 @@ package net.joshuahughes.hipr2.lower;
 
 //package code.connections;
 
-import java.lang.*;
+
 import java.util.*;
-import java.awt.*;
+
 import java.io.*;
-import java.awt.event.*;
+
 import javax.swing.*;
-import javax.swing.event.*;
+
 
 /**
  * Details of all the links in the system and details of the
  * link currently being adjusted.
  */
-public class linkData{
-  /**
+public class linkData implements Serializable{
+	private static final long serialVersionUID = 1L;
+/**
    * The operator that the current link originates from.
    */
   operator currentLinkFrom;

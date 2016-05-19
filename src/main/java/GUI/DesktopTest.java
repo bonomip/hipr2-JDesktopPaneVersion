@@ -3,6 +3,14 @@ package GUI;
 //Java core packages   
 import java.awt.*;   
 import java.awt.event.*;   
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+
+
+
 
 //Java extension packages   
 import javax.swing.*;
@@ -26,7 +34,12 @@ public DesktopTest()
    JMenuItem newFrame = new JMenuItem( "New HIPR2 Tableau" );   
 
    addMenu.add( newFrame );   
-   bar.add( addMenu );   
+   //bar.add( addMenu );   
+      
+   JMenuItem loadFrame = new JMenuItem( "Load HIPR2 Tableau" );   
+   addMenu.add( loadFrame );   
+   
+   bar.add( addMenu );
    
    JMenuItem aboutItem = new JMenuItem("About...");
 	aboutItem.setMnemonic('A');
@@ -46,7 +59,46 @@ public DesktopTest()
    // set up desktop   
    theDesktop = new JDesktopPane();   
    getContentPane().add( theDesktop );   
-    
+   
+   loadFrame.addActionListener(
+		   new ActionListener() {
+			   public void actionPerformed( ActionEvent event ) {
+				   ObjectInputStream stream;
+				try {
+					stream = new ObjectInputStream(new FileInputStream("test.t"));
+					GUITotInternal g = (GUITotInternal) stream.readObject();
+					stream.close();
+					
+					g.setupMenuBar();
+					
+					JInternalFrame frame = g.getFrame();
+		            
+		            // attach panel to internal frame content pane   
+		            //Container container = frame.getContentPane();     
+
+		            // set size internal frame to size of its contents   
+		            frame.pack();   
+
+		            // attach internal frame to desktop and show it   
+		            theDesktop.add( frame );   
+		            frame.setVisible( true ); 
+					
+				} catch (FileNotFoundException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} catch (ClassNotFoundException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				   
+			   }
+		   }
+	);
+   
+   
    // set up listener for newFrame menu item   
    newFrame.addActionListener(   
 
