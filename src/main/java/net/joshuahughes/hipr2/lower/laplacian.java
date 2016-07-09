@@ -5,6 +5,7 @@ import java.awt.GridBagLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
+import java.io.Serializable;
 import java.io.StreamTokenizer;
 
 import javax.swing.BoxLayout;
@@ -20,9 +21,13 @@ import javax.swing.JTextField;
 import net.joshuahughes.hipr2.upper.Laplacian;
 
 
-public class laplacian extends operator1DInt{
+public class laplacian extends operator1DInt implements Serializable{
 
-  JLabel l;
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+JLabel l;
   JPanel  p;
   JLabel scaleLabel = new JLabel("Output Display Scale Value");
   JTextField scaleText = new JTextField("1.0",5);

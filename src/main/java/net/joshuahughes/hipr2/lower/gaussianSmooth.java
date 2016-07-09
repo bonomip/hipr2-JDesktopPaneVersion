@@ -3,6 +3,7 @@ package net.joshuahughes.hipr2.lower;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
+import java.io.Serializable;
 import java.io.StreamTokenizer;
 
 import javax.swing.BoxLayout;
@@ -18,9 +19,13 @@ import javax.swing.JTextField;
 import net.joshuahughes.hipr2.upper.GaussianSmooth;
 
 
-public class gaussianSmooth extends operator1DInt{
+public class gaussianSmooth extends operator1DInt implements Serializable{
 
-  JLabel thetaLabel = new JLabel("Theta Value:");
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+JLabel thetaLabel = new JLabel("Theta Value:");
   JTextField thetaText = new JTextField("0.4",5);
   JLabel kernelLabel = new JLabel("Kernel Size");
   JPanel  p = new JPanel();

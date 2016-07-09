@@ -6,6 +6,7 @@ import java.awt.GridBagLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
+import java.io.Serializable;
 import java.io.StreamTokenizer;
 
 import javax.swing.JComboBox;
@@ -20,10 +21,14 @@ import net.joshuahughes.hipr2.upper.InverseFFT;
 import net.joshuahughes.hipr2.upper.TwoDArray;
 
 
-public class fourier extends operator1DInt{
+public class fourier extends operator1DInt implements Serializable{
 
 
-  JPanel fftPanel = new JPanel();
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+JPanel fftPanel = new JPanel();
   JPanel ifftPanel = new JPanel();
   JComboBox fftchoice = new JComboBox();
   JComboBox ifftchoice = new JComboBox();

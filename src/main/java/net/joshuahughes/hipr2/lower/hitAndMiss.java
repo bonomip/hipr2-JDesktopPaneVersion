@@ -1,6 +1,7 @@
 package net.joshuahughes.hipr2.lower;
 
 import java.io.IOException;
+import java.io.Serializable;
 import java.io.StreamTokenizer;
 
 import javax.swing.JFrame;
@@ -11,10 +12,14 @@ import javax.swing.JPanel;
 import net.joshuahughes.hipr2.upper.HitMiss;
 
 
-public class hitAndMiss extends operator2DInt{
+public class hitAndMiss extends operator2DInt implements Serializable{
 
   
-  HitMiss hitmissOp = new HitMiss();
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+HitMiss hitmissOp = new HitMiss();
   static int number=0;
   String type = new String("HitAndMiss");
 

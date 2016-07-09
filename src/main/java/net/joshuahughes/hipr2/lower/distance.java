@@ -3,6 +3,7 @@ package net.joshuahughes.hipr2.lower;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
+import java.io.Serializable;
 import java.io.StreamTokenizer;
 
 import javax.swing.JButton;
@@ -15,9 +16,13 @@ import javax.swing.JTextField;
 import net.joshuahughes.hipr2.upper.Distance;
 
 
-public class distance extends operator1DInt{
+public class distance extends operator1DInt implements Serializable{
 
-  JTextField scaleText = new JTextField("1.0",5);
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+JTextField scaleText = new JTextField("1.0",5);
   JTextField offsetText = new JTextField("0.0",5);
   JButton applyButton = new JButton("Apply");
 

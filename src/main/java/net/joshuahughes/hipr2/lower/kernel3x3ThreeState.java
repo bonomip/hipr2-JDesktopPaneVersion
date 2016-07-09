@@ -8,9 +8,13 @@ import java.awt.event.*;
 import java.awt.color.*;
 import javax.swing.*;
 
-public class kernel3x3ThreeState extends operator2DInt{
+public class kernel3x3ThreeState extends operator2DInt implements Serializable{
   
   /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+/**
    * The current number of this type of operator, used to generate the
    * unique name for each operator (Kernel3x3TwoState 105 etc).
    */

@@ -2,18 +2,15 @@ package net.joshuahughes.hipr2.lower;
 // Author Simon Horne
 
 
-import java.awt.color.*;
+
 import java.awt.*;
 import java.util.*;
 import java.io.*;
-import java.awt.event.*;
+
 
 import javax.swing.*;
-import javax.swing.event.*;
 
 import GUI.DesktopTest;
-
-import java.awt.event.*;
 
 /**
  * All operators extend this class (in reality all operators extend

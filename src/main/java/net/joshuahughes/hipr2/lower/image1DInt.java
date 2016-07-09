@@ -6,6 +6,7 @@ package net.joshuahughes.hipr2.lower;
 
 import java.awt.color.*;
 import java.awt.*;
+import java.io.Serializable;
 import java.util.*;
 
 /**
@@ -16,8 +17,12 @@ import java.util.*;
  * and all negative values to 0), starting at the top-left corner of the
  * image (0,0) and continuing row by row to the bottom-right corner.
  */
-public class image1DInt extends image{
+public class image1DInt extends image implements Serializable{
   /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+/**
    * The array of integer values representing the pixel grey levels.
    */
   private int [] values;

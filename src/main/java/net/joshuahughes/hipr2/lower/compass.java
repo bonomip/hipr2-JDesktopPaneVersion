@@ -3,6 +3,7 @@ package net.joshuahughes.hipr2.lower;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
+import java.io.Serializable;
 import java.io.StreamTokenizer;
 
 import javax.swing.JButton;
@@ -16,9 +17,13 @@ import javax.swing.JTextField;
 import net.joshuahughes.hipr2.upper.Compass;
 
 
-public class compass extends operator1DInt{
+public class compass extends operator1DInt implements Serializable{
 
-  JComboBox kerneltype = new JComboBox();
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+JComboBox kerneltype = new JComboBox();
   JTextField scaleText = new JTextField("1.0",5);
   JTextField offsetText = new JTextField("0",5);
   Compass compassOp = new Compass();

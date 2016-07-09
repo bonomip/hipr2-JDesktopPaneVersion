@@ -8,6 +8,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.MemoryImageSource;
 import java.io.IOException;
+import java.io.Serializable;
 import java.io.StreamTokenizer;
 
 import javax.swing.JButton;
@@ -21,9 +22,16 @@ import net.joshuahughes.hipr2.upper.Histogram;
 import net.joshuahughes.hipr2.upper.NoScaleImageCanvas;
 
 
-public class histogram extends operator1DInt{
+public class histogram extends operator1DInt implements Serializable{
 
   /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+
+
+/**
    * This class is used to display the histogram of an image with 
    * horizontal and vertical axis
    */

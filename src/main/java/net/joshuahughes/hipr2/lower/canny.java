@@ -3,6 +3,7 @@ package net.joshuahughes.hipr2.lower;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
+import java.io.Serializable;
 import java.io.StreamTokenizer;
 
 import javax.swing.JButton;
@@ -16,9 +17,13 @@ import javax.swing.JTextField;
 import net.joshuahughes.hipr2.upper.Canny;
 
 
-public class canny extends operator1DInt{
+public class canny extends operator1DInt implements Serializable{
 
-  Canny cannyOp = new Canny();
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+Canny cannyOp = new Canny();
   //All the components for the interface
   JComboBox sizebox = new JComboBox();
   JLabel sizelabel = new JLabel( "Select Kernel Size" );

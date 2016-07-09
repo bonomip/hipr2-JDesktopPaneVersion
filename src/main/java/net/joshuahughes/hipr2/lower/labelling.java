@@ -4,6 +4,7 @@ import java.awt.BorderLayout;
 import java.awt.Image;
 import java.awt.image.MemoryImageSource;
 import java.io.IOException;
+import java.io.Serializable;
 import java.io.StreamTokenizer;
 
 import javax.swing.ImageIcon;
@@ -15,10 +16,14 @@ import javax.swing.JScrollPane;
 import net.joshuahughes.hipr2.upper.ImageLabel;
 
 
-public class labelling extends operator1DInt{
+public class labelling extends operator1DInt implements Serializable{
 
 
-   /* image displayed in the parameters window with colors */
+   /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+/* image displayed in the parameters window with colors */
   int [] display;
   Image displayImage;
   ImageIcon imageIcon;

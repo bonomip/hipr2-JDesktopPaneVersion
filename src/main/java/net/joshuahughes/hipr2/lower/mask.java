@@ -10,6 +10,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.MemoryImageSource;
 import java.io.IOException;
+import java.io.Serializable;
 import java.io.StreamTokenizer;
 
 import javax.swing.ImageIcon;
@@ -31,9 +32,13 @@ import net.joshuahughes.hipr2.upper.NotchFilter;
 import net.joshuahughes.hipr2.upper.TwoDArray;
 
 
-public class mask extends operator1DInt{
+public class mask extends operator1DInt implements Serializable{
   
   /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+/**
    * This operator generates a mask by applying notch filter, frequency filter
    * and gaussian smoothing to be used with the FFT operator
    * this operator needs to be linked the input image of the FFT operator

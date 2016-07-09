@@ -6,14 +6,19 @@ package net.joshuahughes.hipr2.lower;
 
 import java.awt.color.*;
 import java.awt.*;
+import java.io.Serializable;
 import java.util.*;
 
 /**
  * Image representation consisting of a 2d double array, double values are
  * generated from some convolutions, pixel multiplication (x0.5 etc).
  */
-public class image2DDouble extends image{
+public class image2DDouble extends image implements Serializable{
   /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+/**
    * The 2d double array representing pixel grey levels, a value of
    * 100.75 may be used to represent a pixel internally for operators that
    * use double values but when passed to an operator that only uses

@@ -3,6 +3,7 @@ package net.joshuahughes.hipr2.lower;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
+import java.io.Serializable;
 import java.io.StreamTokenizer;
 
 import javax.swing.JButton;
@@ -15,10 +16,14 @@ import javax.swing.JTextField;
 import net.joshuahughes.hipr2.upper.Crimmins;
 
 
-public class crimmins extends operator1DInt{
+public class crimmins extends operator1DInt implements Serializable{
 
 
-  JLabel iterLabel = new JLabel("Number of iterations");
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+JLabel iterLabel = new JLabel("Number of iterations");
   JTextField iterText = new JTextField("1",5);
   JButton applyButton = new JButton("Apply");
   Crimmins crimminsOp = new Crimmins();

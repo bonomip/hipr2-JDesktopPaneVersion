@@ -5,6 +5,7 @@ import java.awt.GridBagLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
+import java.io.Serializable;
 import java.io.StreamTokenizer;
 
 import javax.swing.JButton;
@@ -17,9 +18,13 @@ import javax.swing.JTextField;
 import net.joshuahughes.hipr2.upper.Affine;
 
 
-public class affine extends operator1DInt{
+public class affine extends operator1DInt implements Serializable{
 
-  GridBagConstraints panelc = new GridBagConstraints();
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+GridBagConstraints panelc = new GridBagConstraints();
   GridBagLayout panellayout = new GridBagLayout();
   JTextField a11 = new JTextField("1",4);
   JTextField a12 = new JTextField("0",4);

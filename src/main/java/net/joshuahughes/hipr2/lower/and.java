@@ -3,6 +3,7 @@ package net.joshuahughes.hipr2.lower;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
+import java.io.Serializable;
 import java.io.StreamTokenizer;
 
 import javax.swing.JButton;
@@ -18,9 +19,13 @@ import NewObject.GUITotInternal;
 import net.joshuahughes.hipr2.upper.ImageAnd;
 
 
-public class and extends operator1DInt{
+public class and extends operator1DInt implements Serializable{
 
-  static int number=0;
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+static int number=0;
   String type = new String("AND");
   JLabel sourceLabel;
   JComboBox sourceBox;

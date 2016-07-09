@@ -3,6 +3,7 @@ package net.joshuahughes.hipr2.lower;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
+import java.io.Serializable;
 import java.io.StreamTokenizer;
 
 import javax.swing.JButton;
@@ -16,9 +17,13 @@ import net.joshuahughes.hipr2.upper.Hough;
 import net.joshuahughes.hipr2.upper.TwoImages;
 
 
-public class hough extends operator1DInt{
+public class hough extends operator1DInt implements Serializable{
 
-  Hough houghOp = new Hough();
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+Hough houghOp = new Hough();
   static int number=0;
   String type = new String("Hough");
   JLabel thresholdLabel;

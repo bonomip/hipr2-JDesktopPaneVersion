@@ -11,6 +11,7 @@ import java.awt.image.MemoryImageSource;
 import java.awt.image.PixelGrabber;
 import java.io.File;
 import java.io.IOException;
+import java.io.Serializable;
 import java.io.StreamTokenizer;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -31,8 +32,12 @@ import net.joshuahughes.hipr2.upper.NoScaleImageCanvas;
  * Operator used to load images into the system for further manipulation
  * from files stored somewhere.
  */
-public class imageLoad extends operator1DInt{
+public class imageLoad extends operator1DInt implements Serializable{
   /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+/**
    * The default file that gets loaded up automatically.
    */
   File file;

@@ -16,9 +16,13 @@ import java.applet.*;
  * etc.
  */
 
-public class fileIO {
+public class fileIO implements Serializable{
 
   /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+/**
    * The system layout file for loading from/saving to.
    */
   File file;

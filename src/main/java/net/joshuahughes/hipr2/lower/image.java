@@ -6,6 +6,7 @@ package net.joshuahughes.hipr2.lower;
 
 import java.awt.color.*;
 import java.awt.*;
+import java.io.Serializable;
 import java.util.*;
 
 /**
@@ -13,8 +14,12 @@ import java.util.*;
  * explicitly store the width and height of the image and the image itself
  * can always be converted to an array of integers.
  */
-public abstract class image{
+public abstract class image implements Serializable{
   /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+/**
    * The width of the image.
    */
   protected int width;

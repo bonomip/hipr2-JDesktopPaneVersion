@@ -14,6 +14,7 @@ import java.awt.image.MemoryImageSource;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.Serializable;
 import java.io.StreamTokenizer;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -37,8 +38,12 @@ import net.joshuahughes.hipr2.upper.NoScaleImageCanvas;
  * This operator displays the image input, the output is as the same 
  * as the input.
  */
-public class imageDisplay extends operator1DInt{
+public class imageDisplay extends operator1DInt implements Serializable{
    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+/**
    * The scrollpane for displaying the loaded image, active when the
    * frame is too small to fit the image in.
    */

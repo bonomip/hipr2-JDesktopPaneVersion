@@ -3,6 +3,7 @@ package net.joshuahughes.hipr2.lower;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
+import java.io.Serializable;
 import java.io.StreamTokenizer;
 
 import javax.swing.JButton;
@@ -16,7 +17,9 @@ import javax.swing.JTextField;
 import net.joshuahughes.hipr2.upper.AdapThresh;
 
 
-public class adaptiveThreshold extends operator1DInt{
+public class adaptiveThreshold extends operator1DInt implements Serializable{
+
+	private static final long serialVersionUID = 1L;
 
   AdapThresh adapthreshOp = new AdapThresh();
   static int number=0;

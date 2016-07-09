@@ -7,6 +7,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.MemoryImageSource;
 import java.io.IOException;
+import java.io.Serializable;
 import java.io.StreamTokenizer;
 
 import javax.swing.ImageIcon;
@@ -22,10 +23,14 @@ import net.joshuahughes.hipr2.upper.Classify;
 import net.joshuahughes.hipr2.upper.Limits;
 
 
-public class classify extends operator1DInt{
+public class classify extends operator1DInt implements Serializable{
 
   
-  /* image displayed in the parameters window with colors */
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+/* image displayed in the parameters window with colors */
   int [] display;
   Image displayImage;
   ImageIcon imageIcon;

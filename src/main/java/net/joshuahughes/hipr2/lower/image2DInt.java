@@ -6,6 +6,7 @@ package net.joshuahughes.hipr2.lower;
 
 import java.awt.color.*;
 import java.awt.*;
+import java.io.Serializable;
 import java.util.*;
 
 /**
@@ -14,8 +15,12 @@ import java.util.*;
  * to the right of (0,0) and (0,1) is the adjacent pixel to the bottom of
  * (0,0).
  */
-public class image2DInt extends image{
+public class image2DInt extends image implements Serializable{
   /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+/**
    * The 2d integer array representing the pixel grey level values.
    */
   private int [][] values;

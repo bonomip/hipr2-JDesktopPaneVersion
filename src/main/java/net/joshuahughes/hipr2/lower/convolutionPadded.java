@@ -3,6 +3,8 @@ package net.joshuahughes.hipr2.lower;
 // Last Modified 16/9/99
 
 
+import java.io.Serializable;
+
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
@@ -11,8 +13,13 @@ import javax.swing.JPanel;
  * 2 inputs - an image and a kernel, 1 output, the padded convolution
  * algorithm is located in code/operator/convolution/Convolution.java.
  */
-public class convolutionPadded extends convolution{
+public class convolutionPadded extends convolution implements Serializable{
   /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+/**
    * Initialise the unique numbering system for all convolutionPadded
    * operators.
    */

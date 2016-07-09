@@ -6,6 +6,7 @@ package net.joshuahughes.hipr2.lower;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
+import java.io.Serializable;
 import java.io.StreamTokenizer;
 
 import javax.swing.JButton;
@@ -24,8 +25,12 @@ import net.joshuahughes.hipr2.upper.Convolution;
  * there is 1 output, the actual convolution algorithm code is located
  * in code/operator/convolution/Convolution.java.
  */
-public class convolution extends operator2DDouble{
+public class convolution extends operator2DDouble implements Serializable{
   /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+/**
    * The convolution algorithm.
    */
   Convolution convolutionOp = new Convolution();

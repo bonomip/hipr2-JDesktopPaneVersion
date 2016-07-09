@@ -1,6 +1,7 @@
 package net.joshuahughes.hipr2.lower;
 
 import java.io.IOException;
+import java.io.Serializable;
 import java.io.StreamTokenizer;
 
 import javax.swing.JFrame;
@@ -11,9 +12,13 @@ import javax.swing.JPanel;
 import net.joshuahughes.hipr2.upper.ConSmooth;
 
 
-public class conservativeSmooth extends operator2DDouble{
+public class conservativeSmooth extends operator2DDouble implements Serializable{
 
-  ConSmooth conSmoothOp = new ConSmooth();
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+ConSmooth conSmoothOp = new ConSmooth();
   static int number=0;
   String type = new String("ConservativeSmoothing");
 

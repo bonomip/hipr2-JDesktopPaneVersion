@@ -1,6 +1,7 @@
 package net.joshuahughes.hipr2.lower;
 
 import java.io.IOException;
+import java.io.Serializable;
 import java.io.StreamTokenizer;
 
 import javax.swing.JFrame;
@@ -10,11 +11,15 @@ import javax.swing.JPanel;
 import net.joshuahughes.hipr2.upper.Boundary;
 
 
-public class boundary extends operator1DInt{
+public class boundary extends operator1DInt implements Serializable{
 
  
   
-  Boundary boundaryOp= new Boundary();
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+Boundary boundaryOp= new Boundary();
   static int number=0;
   int iteration;
   String type = new String("BinaryBoundaryExtractor");

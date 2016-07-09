@@ -3,6 +3,7 @@ package net.joshuahughes.hipr2.lower;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
+import java.io.Serializable;
 import java.io.StreamTokenizer;
 
 import javax.swing.JButton;
@@ -15,10 +16,14 @@ import javax.swing.JTextField;
 import net.joshuahughes.hipr2.upper.Log;
 
 
-public class lapOfGauss extends operator1DInt{
+public class lapOfGauss extends operator1DInt implements Serializable{
 
 
-  JLabel kernelLabel = new JLabel("Kernel Size");
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+JLabel kernelLabel = new JLabel("Kernel Size");
   JTextField kernelText = new JTextField("7",5);
   JLabel thetaLabel = new JLabel("Theta Value");
   JTextField thetaText = new JTextField("0.6",5);

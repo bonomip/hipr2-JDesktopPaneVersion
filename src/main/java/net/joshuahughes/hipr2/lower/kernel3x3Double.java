@@ -8,9 +8,13 @@ import java.awt.event.*;
 import java.awt.color.*;
 import javax.swing.*;
 
-public class kernel3x3Double extends operator2DDouble{
+public class kernel3x3Double extends operator2DDouble implements Serializable{
   
-  static int number=0;
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+static int number=0;
   String type = new String("Kernel3x3double");
   JTextField [] values;
 

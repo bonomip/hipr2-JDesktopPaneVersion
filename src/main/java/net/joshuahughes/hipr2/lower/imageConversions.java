@@ -1,12 +1,19 @@
 package net.joshuahughes.hipr2.lower;
 
+import java.io.Serializable;
+
 import net.joshuahughes.hipr2.upper.BinaryFast;
 
 /**
  * This class is used to convert pixels
  */
-public class imageConversions {
+public class imageConversions implements Serializable{
   /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+/**
    * Converts an array of greylevel pixels into an RGB representation 
    */
   public static int[] gs2pix(int[] gs){
