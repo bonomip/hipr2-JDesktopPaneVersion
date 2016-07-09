@@ -10,6 +10,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.image.MemoryImageSource;
 import java.io.IOException;
+import java.io.Serializable;
 import java.io.StreamTokenizer;
 
 import javax.swing.JButton;
@@ -24,9 +25,14 @@ import net.joshuahughes.hipr2.upper.Reflect;
 import net.joshuahughes.hipr2.upper.ReflectImageCanvas;
 
 
-public class reflect extends operator1DInt{
+public class reflect extends operator1DInt implements Serializable{
 
-  /* Angle parameter */
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+/* Angle parameter */
   JTextField angleText = new JTextField("0",5);
 
   // To place component in histogram panel and main panel

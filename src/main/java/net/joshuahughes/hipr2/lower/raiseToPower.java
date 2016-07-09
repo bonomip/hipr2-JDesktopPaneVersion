@@ -3,6 +3,7 @@ package net.joshuahughes.hipr2.lower;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
+import java.io.Serializable;
 import java.io.StreamTokenizer;
 
 import javax.swing.JButton;
@@ -15,9 +16,13 @@ import javax.swing.JTextField;
 import net.joshuahughes.hipr2.upper.RaiseToPower;
 
 
-public class raiseToPower extends operator1DInt{
+public class raiseToPower extends operator1DInt implements Serializable{
 
-  JTextField powText;
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+JTextField powText;
   JTextField scaleText;
   JTextField offsetText;
   RaiseToPower raiseToPowerOp = new RaiseToPower();

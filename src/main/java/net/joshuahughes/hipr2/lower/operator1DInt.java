@@ -7,14 +7,19 @@ import java.awt.*;
 import java.util.*;
 import javax.swing.*;
 import java.awt.event.*;
+import java.io.Serializable;
 
 /**
  * All operators that work on image1DInt images extend this class,
  * contains functionality specific for working with image1DInt images.
  */
-public abstract class operator1DInt extends operator{
+public abstract class operator1DInt extends operator implements Serializable{
 
   /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+/**
    * Input1 is an image1DInt.
    */
   image1DInt input1;

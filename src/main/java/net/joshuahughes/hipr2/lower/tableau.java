@@ -7,11 +7,16 @@ import javax.swing.event.*;
 
 
 import java.awt.event.*;
+import java.io.Serializable;
 import java.net.*;
 import java.applet.*;
 
-public class tableau extends JApplet {
-  static JFrame frame;
+public class tableau extends JApplet implements Serializable{
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+static JFrame frame;
   static JPanel panel;
   static JScrollPane scroll;
   static linkData links;

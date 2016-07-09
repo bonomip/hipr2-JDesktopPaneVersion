@@ -8,9 +8,13 @@ import java.awt.event.*;
 import javax.swing.*;
 import javax.swing.event.*;
 
-public class scaleOffset extends operator2DDouble{
+public class scaleOffset extends operator2DDouble implements Serializable{
 
-  JTextField scaleText;
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+JTextField scaleText;
   JTextField offsetText;
   static int number=0;
   String type = new String("ScaleOffset");

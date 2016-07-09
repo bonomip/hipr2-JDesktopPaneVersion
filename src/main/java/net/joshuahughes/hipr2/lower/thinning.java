@@ -3,6 +3,7 @@ package net.joshuahughes.hipr2.lower;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
+import java.io.Serializable;
 import java.io.StreamTokenizer;
 
 import javax.swing.JButton;
@@ -15,9 +16,13 @@ import javax.swing.JTextField;
 import net.joshuahughes.hipr2.upper.Thin;
 
 
-public class thinning extends operator2DInt{
+public class thinning extends operator2DInt implements Serializable{
 
-  JTextField numiterText = new JTextField("1",3);
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+JTextField numiterText = new JTextField("1",3);
   Thin thinOp = new Thin();
   static int number=0;
   int iteration;

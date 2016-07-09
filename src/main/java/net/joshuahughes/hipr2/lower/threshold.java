@@ -10,6 +10,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.MemoryImageSource;
 import java.io.IOException;
+import java.io.Serializable;
 import java.io.StreamTokenizer;
 
 import javax.swing.JButton;
@@ -27,9 +28,13 @@ import net.joshuahughes.hipr2.upper.NoScaleImageCanvas;
 import net.joshuahughes.hipr2.upper.Threshold;
 
 
-public class threshold extends operator1DInt{
+public class threshold extends operator1DInt implements Serializable{
 
-  image1DInt temp;
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+image1DInt temp;
   Threshold thresholdOp = new Threshold();
   static int number=0;
   String type = new String("Thresholding");

@@ -4,6 +4,7 @@ import java.awt.color.*;
 import java.awt.*;
 import java.util.*;
 import java.awt.event.*;
+import java.io.Serializable;
 
 import javax.swing.*;
 import javax.swing.event.*;
@@ -13,8 +14,12 @@ import GUI.DesktopTest;
 import java.awt.event.*;
 import java.lang.*;
 
-public class operatorBox extends JPanel{
-  static ArrayList boxes = new ArrayList();
+public class operatorBox extends JPanel implements Serializable{
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+static ArrayList boxes = new ArrayList();
   public operator representsOperator;
   static linkData links;
   JPanel ins;

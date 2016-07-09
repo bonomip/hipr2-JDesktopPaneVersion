@@ -3,15 +3,21 @@ package net.joshuahughes.hipr2.lower;
 // Last Modified 19/07/00
 
 
+import java.io.Serializable;
+
 import net.joshuahughes.hipr2.upper.BinaryFast;
 
 /**
  * All operators that work on Binary Fast images extend this class,
  * contains functionality specific for working with Binary Fast images.
  */
-public abstract class operatorBinary extends operator{
+public abstract class operatorBinary extends operator implements Serializable{
 
   /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+/**
    * Input1 is a BinaryFast image.
    */
    BinaryFast input1;

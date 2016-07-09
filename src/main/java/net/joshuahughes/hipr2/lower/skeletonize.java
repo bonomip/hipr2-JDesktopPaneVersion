@@ -1,6 +1,7 @@
 package net.joshuahughes.hipr2.lower;
 
 import java.io.IOException;
+import java.io.Serializable;
 import java.io.StreamTokenizer;
 
 import javax.swing.JFrame;
@@ -10,9 +11,13 @@ import javax.swing.JPanel;
 import net.joshuahughes.hipr2.upper.Skeleton;
 
 
-public class skeletonize extends operator1DInt{
+public class skeletonize extends operator1DInt implements Serializable{
 
-  Skeleton skeletonOp = new Skeleton();
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+Skeleton skeletonOp = new Skeleton();
   static int number=0;
   String type = new String("Skeletonization");
 

@@ -3,6 +3,7 @@ package net.joshuahughes.hipr2.lower;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
+import java.io.Serializable;
 import java.io.StreamTokenizer;
 
 import javax.swing.JButton;
@@ -16,10 +17,14 @@ import javax.swing.JTextField;
 import net.joshuahughes.hipr2.upper.ZeroCrossing;
 
 
-public class zeroCrossing extends operator1DInt{
+public class zeroCrossing extends operator1DInt implements Serializable{
 
  
-  //All the components for the interface
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+//All the components for the interface
   JComboBox sizebox = new JComboBox();
   JLabel sizelabel = new JLabel( "Select Kernel Size" );
   JLabel thetalabel = new JLabel("Standard Deviation");

@@ -5,6 +5,7 @@ import java.awt.GridBagLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
+import java.io.Serializable;
 import java.io.StreamTokenizer;
 
 import javax.swing.JButton;
@@ -18,9 +19,13 @@ import javax.swing.JTextField;
 import net.joshuahughes.hipr2.upper.Translate;
 
 
-public class translate extends operator1DInt{
+public class translate extends operator1DInt implements Serializable{
 
-  GridBagConstraints panelc = new GridBagConstraints();
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+GridBagConstraints panelc = new GridBagConstraints();
   GridBagLayout panellayout = new GridBagLayout();
   JComboBox wrap = new JComboBox();
   JTextField xText = new JTextField("0",5);

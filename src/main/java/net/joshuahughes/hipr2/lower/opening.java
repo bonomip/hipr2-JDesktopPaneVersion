@@ -3,6 +3,7 @@ package net.joshuahughes.hipr2.lower;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
+import java.io.Serializable;
 import java.io.StreamTokenizer;
 
 import javax.swing.JButton;
@@ -15,9 +16,13 @@ import javax.swing.JTextField;
 import net.joshuahughes.hipr2.upper.Open;
 
 
-public class opening extends operator2DInt{
+public class opening extends operator2DInt implements Serializable{
 
-  JLabel iterLabel = new JLabel("Depth:");
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+JLabel iterLabel = new JLabel("Depth:");
   JTextField iterText = new JTextField("1",5);
   JButton applyButton = new JButton("Apply");
   Open openOp = new Open();

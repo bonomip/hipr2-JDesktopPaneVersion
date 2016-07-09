@@ -1,16 +1,22 @@
 package net.joshuahughes.hipr2.lower;
 
+import java.io.Serializable;
+
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 import net.joshuahughes.hipr2.upper.MedianSmooth;
 
 
-public class medianSmooth extends convolution{
+public class medianSmooth extends convolution implements Serializable{
 
  
 
-  MedianSmooth medianSmoothOp = new MedianSmooth();
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+MedianSmooth medianSmoothOp = new MedianSmooth();
   static int number=0;
   int iterations;
   String type = new String("MedianSmoothing");

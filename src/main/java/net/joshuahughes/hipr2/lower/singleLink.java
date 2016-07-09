@@ -6,6 +6,7 @@ package net.joshuahughes.hipr2.lower;
 
 import java.lang.*;
 import java.awt.geom.*;
+import java.io.Serializable;
 import java.util.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -22,8 +23,12 @@ import javax.swing.event.*;
  * one single link can link to a specific input.  Several links can link
  * from an output.
  */
-public class singleLink extends JPanel{
+public class singleLink extends JPanel implements Serializable{
   /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+/**
    * The stroke used for the curvy line graphically representing the 
    * actual link on the UI.
    */

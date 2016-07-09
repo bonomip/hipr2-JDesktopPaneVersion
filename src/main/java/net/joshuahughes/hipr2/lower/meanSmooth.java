@@ -1,5 +1,7 @@
 package net.joshuahughes.hipr2.lower;
 
+import java.io.Serializable;
+
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
@@ -7,9 +9,13 @@ import net.joshuahughes.hipr2.upper.InputException;
 import net.joshuahughes.hipr2.upper.MeanSmooth;
 
 
-public class meanSmooth extends convolution{
+public class meanSmooth extends convolution implements Serializable{
 
   /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+/**
    * The mean smoothing operator code.
    */
   MeanSmooth meanOp = new MeanSmooth();

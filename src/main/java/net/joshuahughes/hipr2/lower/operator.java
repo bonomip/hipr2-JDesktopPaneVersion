@@ -16,9 +16,13 @@ import GUI.DesktopTest;
  * All operators extend this class (in reality all operators extend
  * one of several classes for example operator1DInt that extend this class).
  */
-public abstract class operator{
+public abstract class operator implements Serializable{
         
   /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+/**
    * The panel that the operatorBox (representing the operator graphically
    * on the UI) is placed on (this is the panel that is on the big 
    * scrollpane taking up most of the UI).

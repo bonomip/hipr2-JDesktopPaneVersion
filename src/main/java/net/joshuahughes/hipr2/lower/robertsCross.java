@@ -1,6 +1,7 @@
 package net.joshuahughes.hipr2.lower;
 
 import java.io.IOException;
+import java.io.Serializable;
 import java.io.StreamTokenizer;
 
 import javax.swing.JFrame;
@@ -10,9 +11,13 @@ import javax.swing.JPanel;
 import net.joshuahughes.hipr2.upper.Roberts;
 
 
-public class robertsCross extends operator1DInt{
+public class robertsCross extends operator1DInt implements Serializable{
 
-  Roberts robertsOp = new Roberts();
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+Roberts robertsOp = new Roberts();
   static int number=0;
   String type = new String("RobertsCross");
 

@@ -8,13 +8,18 @@ import java.awt.*;
 import java.util.*;
 import javax.swing.*;
 import java.awt.event.*;
+import java.io.Serializable;
 
 /**
  * All operators that deal with image2DInt images extend this class.
  */
-public abstract class operator2DInt extends operator{
+public abstract class operator2DInt extends operator implements Serializable{
 
   /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+/**
    * Input1 is an image2DInt.
    */
   image2DInt input1;
