@@ -4,6 +4,7 @@ import java.awt.event.*;
 import javax.swing.event.*;
 import java.awt.*;
 import java.awt.image.*;
+import java.io.Serializable;
 import java.awt.Color;
 import java.net.*;
 
@@ -13,9 +14,13 @@ import java.net.*;
  *@author Timothy Sharman
  */
 
-public class TranslateImageCanvas extends NoScaleImageCanvas {
+public class TranslateImageCanvas extends NoScaleImageCanvas implements Serializable{
 
-  public int start_x, start_y, end_x, end_y;  // Start and end of line delimiting translation
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+public int start_x, start_y, end_x, end_y;  // Start and end of line delimiting translation
   private boolean dragging;
   public float ratio; // ratio between displayed and actual size of image
 

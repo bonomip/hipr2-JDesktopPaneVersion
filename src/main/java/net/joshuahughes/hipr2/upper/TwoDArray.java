@@ -1,5 +1,6 @@
 package net.joshuahughes.hipr2.upper;
 
+import java.io.Serializable;
 import java.lang.Math.*;
 
 /**
@@ -8,8 +9,12 @@ import java.lang.Math.*;
  *
  * @author Simon Horne.
  */
-public class TwoDArray{
+public class TwoDArray implements Serializable{
   /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+/**
    * The actual width of the image represented by the TwoDArray.
    */
   public int width;

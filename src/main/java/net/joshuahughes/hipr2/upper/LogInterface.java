@@ -5,6 +5,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.awt.image.*;
+import java.io.Serializable;
 import java.lang.*;
 //import code.iface.highlevel.*;
 //import code.iface.common.*;
@@ -49,9 +50,13 @@ import java.lang.*;
  *
  * @author Simon Horne.
  */
-public class LogInterface extends SingleInputImageInterface{
+public class LogInterface extends SingleInputImageInterface implements Serializable{
 
   /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+/**
    * The kernel interface part of the GUI.
    */
   KernelInterface kernel;

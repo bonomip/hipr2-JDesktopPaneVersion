@@ -4,14 +4,19 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.awt.image.*;
+import java.io.Serializable;
 
 /**
  * LaplacianInterface is the user interface to the 
  * Laplacian smoothing algorithm.
  * @author Simon Horne.
  */
-public class LaplacianInterface extends SingleInputImageInterface{
+public class LaplacianInterface extends SingleInputImageInterface implements Serializable{
   /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+/**
    * The laplacian smoothing operator code.
    */
   Laplacian laplacian;

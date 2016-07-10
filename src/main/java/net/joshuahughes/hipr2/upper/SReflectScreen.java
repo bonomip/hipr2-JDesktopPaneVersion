@@ -5,6 +5,7 @@ import javax.swing.event.*;
 import java.awt.event.*;
 import java.awt.*;
 import java.awt.image.*;
+import java.io.Serializable;
 import java.awt.Color;
 import java.net.*;
 import javax.swing.event.*;
@@ -20,9 +21,14 @@ import javax.swing.event.*;
  *@author Timothy Sharman 
  */
 
-public class SReflectScreen extends VisionApplet1 {
+public class SReflectScreen extends VisionApplet1 implements Serializable{
 
-  //The input picture. Overrides the input canvas in VisionApplet.
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+//The input picture. Overrides the input canvas in VisionApplet.
   //This allow the use of the specially tailored ReflectImageCanvas./
 
   public ReflectImageCanvas src_canvas;

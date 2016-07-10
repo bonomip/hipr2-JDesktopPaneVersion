@@ -5,6 +5,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.awt.image.*;
+import java.io.Serializable;
 //import code.iface.highlevel.*;
 //import code.iface.common.*;
 //import code.operator.mat.*;
@@ -15,9 +16,13 @@ import java.awt.image.*;
  *
  * @author Simon Horne.
  */
-public class MatInterface extends SingleBinaryImageInterface{
+public class MatInterface extends SingleBinaryImageInterface implements Serializable{
 
-  Mat mat;
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+Mat mat;
   TimeTakenInterface timetaken;
   ScaleOffsetInterface scaleOffset;
   ThresholdInterface threshold;

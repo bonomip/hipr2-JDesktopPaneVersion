@@ -3,6 +3,7 @@ package net.joshuahughes.hipr2.upper;
 
 import java.awt.*;
 import java.awt.image.*;
+import java.io.Serializable;
 import java.awt.Color;
 import java.net.*;
 import javax.swing.*;
@@ -18,9 +19,14 @@ import java.awt.event.*;
  *embedded in the file pixsub.htm 
  *@author Judy Robertson SELLIC OnLine, Timothy Sharman
  */
-public class SImageDifferenceScreen extends VisionApplet2 {
+public class SImageDifferenceScreen extends VisionApplet2 implements Serializable{
 
-  //The operator class for performing image difference. It's a thread
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+//The operator class for performing image difference. It's a thread
   ImageDifference imagediff;
 
   //which image should be subtracted from the other

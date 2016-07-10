@@ -5,6 +5,7 @@ import javax.swing.event.*;
 import java.awt.event.*;
 import java.awt.*;
 import java.awt.image.*;
+import java.io.Serializable;
 import java.awt.Color;
 import java.net.*;
 
@@ -17,9 +18,14 @@ import java.net.*;
  *@author Konstantinos Koryllos, Judy Robertson SELLIC OnLine, Timothy Sharman
  */
 
-public class SThresholdScreen extends HistVisionApplet {
+public class SThresholdScreen extends HistVisionApplet implements Serializable{
   
   /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+/**
    *The current low threshold for the threshold algorithm
    */ 
   

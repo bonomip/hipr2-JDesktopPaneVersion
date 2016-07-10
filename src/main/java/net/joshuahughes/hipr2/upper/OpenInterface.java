@@ -5,6 +5,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.awt.image.*;
+import java.io.Serializable;
 //import code.iface.common.*;
 //import code.iface.highlevel.*;
 //import code.iface.kernels.*;
@@ -16,8 +17,12 @@ import java.awt.image.*;
  * 
  * @author Simon Horne.
  */
-public class OpenInterface extends SingleBinaryImageInterface{
+public class OpenInterface extends SingleBinaryImageInterface implements Serializable{
   /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+/**
    * The interface for the two state (on/off) 3x3 kernel.
    */
   TwoState3x3Kernel mask;

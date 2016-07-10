@@ -13,9 +13,15 @@ import java.lang.Math;
  * @author:Craig Strachan after Judy Robertson, SELLIC Online
  */
 
-public class Translate extends Thread {
+public class Translate extends Thread implements Serializable{
 
-  public Translate() {
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+
+public Translate() {
   }
 
   /**

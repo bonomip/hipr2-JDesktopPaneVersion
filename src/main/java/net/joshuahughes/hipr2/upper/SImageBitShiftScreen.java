@@ -3,6 +3,7 @@ package net.joshuahughes.hipr2.upper;
 
 import java.awt.*;
 import java.awt.image.*;
+import java.io.Serializable;
 import java.awt.Color;
 import java.net.*;
 import javax.swing.*;
@@ -20,9 +21,14 @@ import java.awt.event.*;
  *@author Neil Brown, DAI
  *@author Timothy Sharman
  */
-public class SImageBitShiftScreen extends VisionApplet1 {
+public class SImageBitShiftScreen extends VisionApplet1 implements Serializable{
 
-  //The operator class for performing image logical BitShift. It's a thread
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+//The operator class for performing image logical BitShift. It's a thread
   ImageBitShift imagebitshift;
 
   //Do we do shift left or right

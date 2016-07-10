@@ -3,6 +3,7 @@ package net.joshuahughes.hipr2.upper;
 
 import java.awt.*;
 import java.awt.image.*;
+import java.io.Serializable;
 import java.awt.Color;
 import java.net.*;
 import javax.swing.*;
@@ -21,9 +22,14 @@ import java.awt.event.*;
  *@author Neil Brown, DAI
  *@author Timothy Sharman
  */
-public class SImageXorScreen extends VisionApplet2{
+public class SImageXorScreen extends VisionApplet2 implements Serializable{
 
-  //The operator class for performing image logical XOR. It's a thread
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+//The operator class for performing image logical XOR. It's a thread
   ImageXor imagexor;
 
   //should we use a constant or an image?

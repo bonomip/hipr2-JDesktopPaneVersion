@@ -5,6 +5,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.awt.image.*;
+import java.io.Serializable;
 //import code.iface.highlevel.*;
 //import code.iface.common.*;
 //import code.iface.kernels.*;
@@ -15,9 +16,13 @@ import java.awt.image.*;
  *
  * @author Simon Horne.
  */
-public class ThickenInterface extends SingleBinaryImageInterface{
+public class ThickenInterface extends SingleBinaryImageInterface implements Serializable{
 
-  ThreeState3x3Kernel kernel;
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+ThreeState3x3Kernel kernel;
   TimeTakenInterface timetaken;
   IterationsInterface iterations;
   private long time1, time2;

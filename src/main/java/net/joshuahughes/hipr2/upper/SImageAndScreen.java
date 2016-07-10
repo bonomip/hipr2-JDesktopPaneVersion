@@ -3,6 +3,7 @@ package net.joshuahughes.hipr2.upper;
 
 import java.awt.*;
 import java.awt.image.*;
+import java.io.Serializable;
 import java.awt.Color;
 import java.net.*;
 import javax.swing.*;
@@ -23,9 +24,14 @@ import java.awt.event.*;
  *@see code.iface.imageand
  */
 
-public class SImageAndScreen extends VisionApplet2{
+public class SImageAndScreen extends VisionApplet2 implements Serializable{
 
-  //The operator class for performing image logical AND. It's a thread
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+//The operator class for performing image logical AND. It's a thread
   ImageAnd imageand;
 
   //should we use a constant or an image?

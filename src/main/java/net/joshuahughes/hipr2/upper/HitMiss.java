@@ -13,9 +13,14 @@ import java.lang.Math;
  *
  * @author: Simon Horne
  */
-public class HitMiss extends Thread {
+public class HitMiss extends Thread implements Serializable{
   
   /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+/**
    * Default no-args constructor.
    */
   public HitMiss() {

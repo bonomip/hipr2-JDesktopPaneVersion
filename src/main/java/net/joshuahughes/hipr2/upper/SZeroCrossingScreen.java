@@ -3,6 +3,7 @@ package net.joshuahughes.hipr2.upper;
 
 import java.awt.*;
 import java.awt.image.*;
+import java.io.Serializable;
 import java.awt.Color;
 import java.net.*;
 import javax.swing.*;
@@ -19,9 +20,14 @@ import java.awt.event.*;
  *@author Timothy Sharman
  */
 
-public class SZeroCrossingScreen extends VisionApplet1 {
+public class SZeroCrossingScreen extends VisionApplet1 implements Serializable{
   
-  //The operator class for performing zero crossing detection. It's a thread
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+//The operator class for performing zero crossing detection. It's a thread
   ZeroCrossing zerocrossing;
 
   //Local variables for passing to the operator

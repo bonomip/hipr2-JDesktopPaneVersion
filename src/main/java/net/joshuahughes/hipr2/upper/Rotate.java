@@ -15,9 +15,13 @@ import java.io.*;
 *@see code.iface.rotate
 */
 
-public class Rotate extends Thread{
+public class Rotate extends Thread implements Serializable{
 
-  //The width and height of the output
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+//The width and height of the output
   private int d_w;
   private int d_h;
   

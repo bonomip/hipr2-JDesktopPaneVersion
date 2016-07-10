@@ -3,10 +3,15 @@ package net.joshuahughes.hipr2.upper;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.io.Serializable;
 
-public class ThetaInterface {
+public class ThetaInterface implements Serializable{
 
-  private JPanel p;
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+private JPanel p;
   private JLabel l;
   public JTextField t;
 

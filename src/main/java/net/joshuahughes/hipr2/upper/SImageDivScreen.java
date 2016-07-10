@@ -2,6 +2,7 @@ package net.joshuahughes.hipr2.upper;
 
 import java.awt.*;
 import java.awt.image.*;
+import java.io.Serializable;
 import java.awt.Color;
 import java.net.*;
 import javax.swing.*;
@@ -17,9 +18,14 @@ import java.awt.event.*;
  *@author Neil Brown, DAI
  *@author Timothy Sharman
  */
-public class SImageDivScreen extends VisionApplet2{
+public class SImageDivScreen extends VisionApplet2 implements Serializable{
 
-  //The operator class for performing image division. It's a thread
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+//The operator class for performing image division. It's a thread
   ImageDiv imagediv;
 
   //should we use a constant or an image?

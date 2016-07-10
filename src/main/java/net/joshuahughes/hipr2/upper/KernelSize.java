@@ -3,15 +3,20 @@ package net.joshuahughes.hipr2.upper;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.io.Serializable;
 
 /**
  * Interface for selecting the required size of kernel (5 buttons 3-7).
  *
  * @author Simon Horne.
  */
-public class KernelSize {
+public class KernelSize implements Serializable{
 
-  private JPanel p;
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+private JPanel p;
   private JLabel l;
   private int s = 3;
 

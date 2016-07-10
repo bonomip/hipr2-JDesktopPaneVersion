@@ -3,6 +3,7 @@ package net.joshuahughes.hipr2.upper;
 
 import java.awt.*;
 import java.awt.image.*;
+import java.io.Serializable;
 import java.net.*;
 import java.awt.Color;
 import java.awt.event.*;
@@ -19,9 +20,14 @@ import javax.swing.*;
  *@author Timothy Sharman
  */
 
-public class SContrastStretchScreen extends VisionApplet1 {
+public class SContrastStretchScreen extends VisionApplet1 implements Serializable{
 
-  //The operator class for performing contrast stretching. It's a thread
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+//The operator class for performing contrast stretching. It's a thread
   ContrastStretch contraststretch;
 
   //Variables to be passed to the operator

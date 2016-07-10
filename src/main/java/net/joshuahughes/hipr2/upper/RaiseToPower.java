@@ -15,9 +15,13 @@ import java.io.*;
  *@see code.iface.raiseToPower
  */
 
-public class RaiseToPower extends Thread{
+public class RaiseToPower extends Thread implements Serializable{
 
   /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+/**
    * The width of the output
    */
   private int d_w;

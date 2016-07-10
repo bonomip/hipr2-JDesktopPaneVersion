@@ -13,8 +13,12 @@ import java.lang.Math;
  *
  * @author Simon Horne.
  */
-public class Mat extends Thread {
-  Skeleton skeleton = new Skeleton();
+public class Mat extends Thread implements Serializable{
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+Skeleton skeleton = new Skeleton();
   Distance distance = new Distance();
   int [][] greyLevel;
   /**

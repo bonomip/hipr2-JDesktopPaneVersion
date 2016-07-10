@@ -13,9 +13,13 @@ import java.lang.Math;
  *
  * @author Simon Horne.
  */
-public class Thicken extends Thread {
+public class Thicken extends Thread implements Serializable{
 
-  //Black background
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+//Black background
   /**
    * Background is black.
    */

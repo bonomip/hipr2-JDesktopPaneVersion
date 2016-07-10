@@ -16,9 +16,13 @@ import java.io.*;
  *@see code.iface.imageor
  */
 
-public class ImageOr extends Thread{
+public class ImageOr extends Thread implements Serializable{
 
-  //the width of the input images in pixels
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+//the width of the input images in pixels
   private int i1_w;
   private int i2_w;
 

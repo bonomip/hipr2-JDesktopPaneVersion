@@ -3,6 +3,7 @@ package net.joshuahughes.hipr2.upper;
 
 import java.awt.*;
 import java.awt.image.*;
+import java.io.Serializable;
 import java.net.*;
 import java.awt.Color;
 import java.awt.event.*;
@@ -19,9 +20,14 @@ import javax.swing.*;
  */
 
 
-public class SRobertsScreen extends VisionApplet1 {
+public class SRobertsScreen extends VisionApplet1 implements Serializable{
 
-  //The operator class for performing the roberts cross operator. It's a thread
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+//The operator class for performing the roberts cross operator. It's a thread
   Roberts roberts;
 
   //The scale value to be applied after the robert cross

@@ -16,9 +16,14 @@ import java.lang.Math.*;
  *@see code.iface.imagelabel
  */
 
-public class ImageLabel extends Thread{
+public class ImageLabel extends Thread implements Serializable{
   
-  //the width of the input image in pixels
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+//the width of the input image in pixels
   private int i1_w;
   
   //the width and height of the output image

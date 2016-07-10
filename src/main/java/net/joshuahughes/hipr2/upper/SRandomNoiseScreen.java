@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.awt.image.*;
+import java.io.Serializable;
 import java.awt.Color;
 import java.net.*;
 
@@ -14,9 +15,14 @@ import java.net.*;
  *embedded in the file noise.htm 
  *@author Timothy Sharman
  */
-public class SRandomNoiseScreen extends VisionApplet1 {
+public class SRandomNoiseScreen extends VisionApplet1 implements Serializable{
 
-  //The operator class for performing noise generation. It's a thread
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+//The operator class for performing noise generation. It's a thread
   RandomNoise randomnoise;
 
   //The listeners for the GUI

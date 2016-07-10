@@ -14,9 +14,13 @@ import java.awt.Color.*;
  *
  * @author Simon Horne.
  */
-public class Unsharp extends MeanSmooth {
+public class Unsharp extends MeanSmooth implements Serializable{
 
-  public Unsharp(){
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+public Unsharp(){
   }
   /**
    * The all 1s kernel.

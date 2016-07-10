@@ -11,9 +11,13 @@ import javax.swing.*;
  *
  *@author Timothy Sharman
  */
-public class NoScaleImageCanvas extends JLabel{
+public class NoScaleImageCanvas extends JLabel implements Serializable{
 
   /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+/**
    *The image drawn to this canvas
    */
   

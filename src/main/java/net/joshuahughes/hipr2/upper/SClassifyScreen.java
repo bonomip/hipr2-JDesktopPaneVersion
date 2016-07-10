@@ -2,6 +2,7 @@ package net.joshuahughes.hipr2.upper;
 
 import java.awt.*;
 import java.awt.image.*;
+import java.io.Serializable;
 import java.net.*;
 import java.awt.Color;
 import java.awt.event.*;
@@ -16,9 +17,14 @@ import javax.swing.event.*;
  *@author Timothy Sharman
  */
 
-public class SClassifyScreen extends VisionApplet1 {
+public class SClassifyScreen extends VisionApplet1 implements Serializable{
 
-  //The operator class for performing the classification. It's a thread
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+//The operator class for performing the classification. It's a thread
   Classify classify;
 
   int numClasses = 16;

@@ -3,6 +3,7 @@ package net.joshuahughes.hipr2.upper;
 
 import java.awt.*;
 import java.awt.image.*;
+import java.io.Serializable;
 import java.net.*;
 import java.awt.Color;
 import java.awt.event.*;
@@ -20,9 +21,14 @@ import javax.swing.*;
  *@see code.operator.linedet
  */
 
-public class SLineDetectorScreen extends VisionApplet3 {
+public class SLineDetectorScreen extends VisionApplet3 implements Serializable{
 
-  //The operator class for performing line detection. It's a thread
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+//The operator class for performing line detection. It's a thread
   LineDetector linedetector;
 
   int thresh = 0;

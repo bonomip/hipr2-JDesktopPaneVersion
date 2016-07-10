@@ -4,14 +4,19 @@ package net.joshuahughes.hipr2.upper;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.io.Serializable;
 
 /**
  * The interface for the laplacian of gaussian kernel size 
  * and theta selection.
  */
-public class KernelInterface {
+public class KernelInterface implements Serializable{
 
-  private JPanel p;
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+private JPanel p;
   private JLabel kl,tl;
   private JTextField ktf,ttf;
 

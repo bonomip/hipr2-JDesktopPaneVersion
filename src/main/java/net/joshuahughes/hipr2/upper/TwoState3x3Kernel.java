@@ -6,15 +6,20 @@ import java.awt.event.*;
 import java.awt.color.*;
 
 import java.awt.image.*;
+import java.io.Serializable;
 import java.net.*;
 import javax.swing.event.*;
 
 /**
  * The interface for the two-state (on/off) 3x3 kernel.
  */
-public class TwoState3x3Kernel  extends JApplet {
+public class TwoState3x3Kernel  extends JApplet implements Serializable{
 
-  private JPanel p1,p2;
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+private JPanel p1,p2;
   private JLabel l;
   /**
    * Array of 9 buttons for toggling values 0,1.

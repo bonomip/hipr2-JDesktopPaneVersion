@@ -12,9 +12,14 @@ import java.awt.image.ImageProducer;
  *
  *@author Judy Robertson SELLIC OnIine
  */
-public class HistogramImageCanvas extends NoScaleImageCanvas{
+public class HistogramImageCanvas extends NoScaleImageCanvas implements Serializable{
 
   /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+/**
    *The histogram diagram which will be drawn on the canvas
    */
   public Image image;

@@ -2,15 +2,21 @@ package net.joshuahughes.hipr2.upper;
 
 import java.lang.Math.*;
 import java.awt.*;
+import java.io.Serializable;
 
 /**
  * Class containing method to apply a notch filter to an image.
  *
  * @author Simon Horne.
  */
-public class NotchFilter{
+public class NotchFilter implements Serializable{
 
   /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+/**
    * Method to apply notch filter to image by setting pixels within
    * width of the x and y axes to (0,0) but leaving all pixels within
    * radius of (0,0) untouched.

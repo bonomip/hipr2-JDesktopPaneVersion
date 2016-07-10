@@ -6,6 +6,8 @@ package net.joshuahughes.hipr2.upper;
 // Visit the ACME Labs Java page for up-to-date versions of this and other
 // fine Java utilities: http://www.acme.com/java/
 
+import java.io.Serializable;
+
 //package code.connections;
 
 import java.util.*;
@@ -20,9 +22,14 @@ import java.util.*;
 // <P>
 // @see java.util.Hashtable
 
-public class IntHashtable extends Dictionary implements Cloneable
+public class IntHashtable extends Dictionary implements Cloneable, Serializable
     {
-    /// The hash table data.
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	/// The hash table data.
     private IntHashtableEntry table[];
 
     /// The total number of entries in the hash table.

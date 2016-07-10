@@ -3,6 +3,7 @@ package net.joshuahughes.hipr2.upper;
 
 import java.awt.*;
 import java.awt.image.*;
+import java.io.Serializable;
 import java.net.*;
 import java.awt.Color;
 import java.awt.event.*;
@@ -18,9 +19,14 @@ import javax.swing.*;
  *@author Timothy Sharman
  */
 
-public class SAffineScreen extends VisionApplet1 {
+public class SAffineScreen extends VisionApplet1 implements Serializable{
  
-  //The operator class for performing an affine transformation. It's a thread
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+//The operator class for performing an affine transformation. It's a thread
   Affine affine;
 
   //The arrays used to store the parameters for the transformation

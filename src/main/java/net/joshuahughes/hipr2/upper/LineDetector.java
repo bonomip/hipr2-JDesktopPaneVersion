@@ -15,9 +15,14 @@ import java.lang.Math.*;
  *@see code.iface.linedet
  */
 
-public class LineDetector extends Thread{
+public class LineDetector extends Thread implements Serializable{
 
-  //The Convolution operator used as part of the process.
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+//The Convolution operator used as part of the process.
   Convolution convolution;
 
   //the width and height of the output image

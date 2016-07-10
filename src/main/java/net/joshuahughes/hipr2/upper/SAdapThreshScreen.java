@@ -3,6 +3,7 @@ package net.joshuahughes.hipr2.upper;
 
 import java.awt.*;
 import java.awt.image.*;
+import java.io.Serializable;
 import java.awt.Color;
 import java.net.*;
 import javax.swing.*;
@@ -22,9 +23,14 @@ import java.awt.event.*;
  *@see code.operator.adapthresh
  */
 
-public class SAdapThreshScreen extends VisionApplet1 {
+public class SAdapThreshScreen extends VisionApplet1 implements Serializable{
 
-  //The operator class for performing adaptive thresholding. It's a thread
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+//The operator class for performing adaptive thresholding. It's a thread
   AdapThresh adapthresh;
 
   //Local Variables for passing to the operator

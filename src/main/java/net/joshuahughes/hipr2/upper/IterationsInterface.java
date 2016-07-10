@@ -4,15 +4,20 @@ package net.joshuahughes.hipr2.upper;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.io.Serializable;
 /**
  * The interface for selecting the number of iterations an operator
  * should run for.
  *
  * @author Simon Horne.
  */
-public class IterationsInterface {
+public class IterationsInterface implements Serializable{
 
-  private JPanel p;
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+private JPanel p;
   public JLabel l;
   private JTextField t;
   

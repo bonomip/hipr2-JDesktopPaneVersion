@@ -13,8 +13,12 @@ import java.lang.Math;
  *
  * @author Simon Horne.
  */
-public class Skeleton extends Thread {
+public class Skeleton extends Thread implements Serializable{
   /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+/**
    * 2D array of kernel values, 8 3x3 kernels.
    */
   int kernel [] [] = new int [] [] {

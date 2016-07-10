@@ -2,15 +2,21 @@ package net.joshuahughes.hipr2.upper;
 
 import java.lang.Math.*;
 import java.awt.*;
+import java.io.Serializable;
 
 /**
  * Class containing methods to manipulate and modify TwoDArray images.
  *
  * @author Simon Horne.
  */
-public class ImageMods{
+public class ImageMods implements Serializable{
 
   /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+/**
    * Default no-args constructor.
    */
     public ImageMods(){

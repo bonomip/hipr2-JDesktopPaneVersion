@@ -52,10 +52,15 @@ import java.awt.image.*;
 // @see PpmEncoder
 // @see Acme.JPM.Decoders.ImageDecoder
 
-public abstract class ImageEncoder implements ImageConsumer
+public abstract class ImageEncoder implements ImageConsumer, Serializable
     {
 
-    protected OutputStream out;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	protected OutputStream out;
 
     private ImageProducer producer;
     private int width = -1;

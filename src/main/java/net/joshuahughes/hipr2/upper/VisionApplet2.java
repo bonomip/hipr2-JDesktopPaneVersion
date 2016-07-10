@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.awt.image.*;
+import java.io.Serializable;
 import java.awt.Color;
 import java.net.*;
 import javax.swing.event.*;
@@ -17,9 +18,14 @@ import javax.swing.event.*;
  *@author Timothy Sharman
  */
 
-public class VisionApplet2 extends JApplet { 
+public class VisionApplet2 extends JApplet implements Serializable{ 
 
-  //The main window
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+//The main window
   /**
    *The main container for the applet
    */

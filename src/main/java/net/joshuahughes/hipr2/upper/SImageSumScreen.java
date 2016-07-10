@@ -3,6 +3,7 @@ package net.joshuahughes.hipr2.upper;
 
 import java.awt.*;
 import java.awt.image.*;
+import java.io.Serializable;
 import java.awt.Color;
 import java.net.*;
 import java.awt.event.*;
@@ -17,9 +18,14 @@ import javax.swing.*;
  *embedded in the file pixadd.htm 
  *@author Bob Fisher, Judy Robertson SELLIC OnLine, Timothy Sharman
  */
-public class SImageSumScreen extends VisionApplet2{
+public class SImageSumScreen extends VisionApplet2 implements Serializable{
 
-  //The operator class for performing image addition. It's a thread
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+//The operator class for performing image addition. It's a thread
   ImageSum imagesum;
 
   //should we use a constant or an image?

@@ -5,6 +5,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.awt.image.*;
+import java.io.Serializable;
 //import code.iface.highlevel.*;
 //import code.iface.common.*;
 //import code.operator.unsharp.*;
@@ -14,9 +15,13 @@ import java.awt.image.*;
  *
  * @author Simon Horne.
  */
-public class UnsharpInterface extends SingleInputImageInterface{
+public class UnsharpInterface extends SingleInputImageInterface implements Serializable{
 
-  KValue k;
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+KValue k;
   TimeTakenInterface timetaken;
   private long time1, time2;
   private int i;

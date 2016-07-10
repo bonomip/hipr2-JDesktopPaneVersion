@@ -5,10 +5,15 @@ package net.joshuahughes.hipr2.upper;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.io.Serializable;
 
-public class ScaleOffsetInterface {
+public class ScaleOffsetInterface implements Serializable{
 
-  private JPanel p;
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+private JPanel p;
   private JLabel scaleLabel;
   private JLabel offsetLabel;
   private JTextField scaleText;

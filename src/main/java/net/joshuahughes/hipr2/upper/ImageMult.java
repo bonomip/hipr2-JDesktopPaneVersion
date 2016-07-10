@@ -15,9 +15,13 @@ import java.io.*;
  *@see code.iface.imagemult
  */
 
-public class ImageMult extends Thread{
+public class ImageMult extends Thread implements Serializable{
 
-  //the width of the input images in pixels
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+//the width of the input images in pixels
   private int i1_w;
   private int i2_w;
   

@@ -4,11 +4,16 @@ package net.joshuahughes.hipr2.upper;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.io.Serializable;
 import java.awt.Color.*;
 
-public class TimeTakenInterface {
+public class TimeTakenInterface implements Serializable{
 
-  private long time_msec;
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+private long time_msec;
   private JPanel p;
   private JLabel l;
   private JTextField t;

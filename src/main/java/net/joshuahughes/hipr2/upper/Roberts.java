@@ -14,10 +14,14 @@ import java.io.*;
  *@see code.iface.roberts
  */
 
-public class Roberts extends Thread{
+public class Roberts extends Thread implements Serializable{
 
 
-  //The width and height of the output
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+//The width and height of the output
   private int d_w;
   private int d_h;
 

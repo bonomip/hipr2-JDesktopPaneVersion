@@ -12,9 +12,13 @@ import javax.swing.*;
  *
  *@author Timothy Sharman
  */
-public class ImageCanvas extends JLabel{
+public class ImageCanvas extends JLabel implements Serializable{
 
   /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+/**
    *The image drawn to this canvas
    */
   

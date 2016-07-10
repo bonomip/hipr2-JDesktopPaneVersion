@@ -2,6 +2,7 @@ package net.joshuahughes.hipr2.upper;
 
 import java.awt.*;
 import java.awt.image.*;
+import java.io.Serializable;
 import java.awt.Color;
 import java.net.*;
 import javax.swing.*;
@@ -17,9 +18,14 @@ import java.awt.event.*;
  *@author Timothy Sharman
  */
 
-public class SCannyScreen extends VisionApplet1 {
+public class SCannyScreen extends VisionApplet1 implements Serializable{
   
-  //The operator class for performing Canny Edge Detection. It's a thread
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+//The operator class for performing Canny Edge Detection. It's a thread
   Canny canny;
 
   //Local variables to be passed to the operator

@@ -4,11 +4,16 @@ package net.joshuahughes.hipr2.upper;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.io.Serializable;
 import java.awt.color.*;
 
-public class StartStopInterface {
+public class StartStopInterface implements Serializable{
 
-  public JPanel p;
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+public JPanel p;
   public JButton start;
   public JButton stop;
   public JLabel status;

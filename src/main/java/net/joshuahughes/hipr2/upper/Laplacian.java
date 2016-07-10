@@ -14,8 +14,12 @@ import java.awt.Color.*;
  * 
  * @author: Simon Horne
  */
-public class Laplacian extends Convolution {
+public class Laplacian extends Convolution implements Serializable{
   /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+/**
    * Kernel type 1.
    */
   static double [][] kernel1 = new double [][] {{0,1,0},{1,-4,1},{0,1,0}};

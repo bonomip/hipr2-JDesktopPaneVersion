@@ -3,13 +3,18 @@ package net.joshuahughes.hipr2.upper;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.image.*;
+import java.io.Serializable;
 import java.awt.event.*;
 import java.net.*;
 /**
  * This class implements methods to apply to images.
  */
-public class ImageTools{
+public class ImageTools implements Serializable{
   /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+/**
    * Scales an image into 256*256.
    * @param icon the ImageIcon representing the image.
    * @return the ImageIcon representing the scaled image.

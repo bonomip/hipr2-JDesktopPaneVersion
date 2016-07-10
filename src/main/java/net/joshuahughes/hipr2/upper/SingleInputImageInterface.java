@@ -1,3 +1,4 @@
+
 package net.joshuahughes.hipr2.upper;
 //package code.iface.highlevel;
 
@@ -5,6 +6,7 @@ import javax.swing.*;
 import javax.swing.event.*;
 import java.awt.*;
 import java.awt.image.*;
+import java.io.Serializable;
 import java.awt.event.*;
 import java.net.*;
 import java.awt.color.*;
@@ -19,7 +21,11 @@ import java.awt.color.*;
 *
 * @author Simon Horne, bug fix by Donald Nairn
 */
-public class SingleInputImageInterface extends JApplet{
+public class SingleInputImageInterface extends JApplet implements Serializable{
+/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 /**
  * The top level GUI container.
  */

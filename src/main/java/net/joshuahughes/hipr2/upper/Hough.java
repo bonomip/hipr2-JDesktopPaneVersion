@@ -15,9 +15,13 @@ import java.lang.Math.*;
  *@see code.iface.hough
  */
 
-public class Hough extends Thread{
+public class Hough extends Thread implements Serializable{
 
-  //the width and height of the output image
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+//the width and height of the output image
 
   private int d_w;
   private int d_h;

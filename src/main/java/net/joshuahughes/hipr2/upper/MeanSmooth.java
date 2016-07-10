@@ -1,6 +1,7 @@
 package net.joshuahughes.hipr2.upper;
 
 import java.awt.*;
+import java.io.Serializable;
 
 /**
  * MeanSmooth is an algorithm to meany smooth a binary image 
@@ -9,8 +10,12 @@ import java.awt.*;
  * @author: Simon Horne.
  */
 
-public class MeanSmooth extends Thread {
+public class MeanSmooth extends Thread implements Serializable{
   /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+/**
    * Default no-args constructor.
    */
   public MeanSmooth() {

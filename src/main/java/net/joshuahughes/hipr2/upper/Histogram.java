@@ -18,9 +18,13 @@ import java.util.*;
  *@version August 2000
  */
 
-public class Histogram extends Thread{
+public class Histogram extends Thread implements Serializable{
   
-  //no of grey-scale values 
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+//no of grey-scale values 
   private final int grey_scales = 256;
   private final int hist_height = 256;
 

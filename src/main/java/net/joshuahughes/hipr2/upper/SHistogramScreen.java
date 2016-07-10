@@ -5,6 +5,7 @@ import javax.swing.*;
 import java.awt.event.*;
 import java.awt.*;
 import java.awt.image.*;
+import java.io.Serializable;
 import java.awt.Color;
 import java.net.*;
 //import code.iface.utils.*;
@@ -19,9 +20,14 @@ import java.net.*;
  */
 
 
-public class SHistogramScreen extends VisionApplet1 {
+public class SHistogramScreen extends VisionApplet1 implements Serializable{
   
-  //The opertor class for making the histogram. It's a thread.
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+//The opertor class for making the histogram. It's a thread.
   Histogram hist;
 
   //The listeners for the GUI

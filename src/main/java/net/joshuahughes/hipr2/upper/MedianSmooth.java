@@ -15,9 +15,14 @@ import java.awt.Color.*;
  * @author Simon Horne.
  */
 
-public class MedianSmooth extends Thread {
+public class MedianSmooth extends Thread implements Serializable{
 
   /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+/**
    * Default no-args constructor.
    */
   public MedianSmooth() {

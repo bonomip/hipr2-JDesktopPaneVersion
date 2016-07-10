@@ -3,14 +3,19 @@ package net.joshuahughes.hipr2.upper;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.io.Serializable;
 import java.net.*;
 
 /**
  * The interface for the three-state (foreground, background, either) kernel.
  */
-public class ThreeState3x3Kernel{
+public class ThreeState3x3Kernel implements Serializable{
 
-  private JPanel p1,p2;
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+private JPanel p1,p2;
   private JLabel l;
   /**
    * Array of 9 buttons for adjusting the kernel.

@@ -14,9 +14,14 @@ import java.io.*;
  *@see code.iface.threshold
  */
 
-public class Threshold extends Thread{
+public class Threshold extends Thread implements Serializable{
   
-  //the width and height of this image in pixels
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+//the width and height of this image in pixels
   private int i_w, i_h;
   
   //pixel arrays for input and output images

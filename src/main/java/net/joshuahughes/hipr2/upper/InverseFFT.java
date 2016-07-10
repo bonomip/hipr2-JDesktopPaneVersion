@@ -2,6 +2,7 @@ package net.joshuahughes.hipr2.upper;
 
 import java.lang.Math.*;
 import java.awt.*;
+import java.io.Serializable;
 
 /**
  * The InverseFFT class contains a method to apply the 2D inverse FFT to a
@@ -9,9 +10,14 @@ import java.awt.*;
  *
  * @author Simon Horne
  */
-public class InverseFFT{
+public class InverseFFT implements Serializable{
 
   /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+/**
    * Default no argument constructor.
    */
   public InverseFFT(){

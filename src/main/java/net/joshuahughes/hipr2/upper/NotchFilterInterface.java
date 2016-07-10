@@ -4,6 +4,7 @@ package net.joshuahughes.hipr2.upper;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.io.Serializable;
 
 /**
  * The interface for the notch filter (horizontal and vertical line removal)
@@ -11,9 +12,13 @@ import java.awt.event.*;
  *
  * @author Simon Horne.
  */
-public class NotchFilterInterface {
+public class NotchFilterInterface implements Serializable{
 
   /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+/**
    * Width is the width of the horizontal and vertical notches.
    */
   private int width;

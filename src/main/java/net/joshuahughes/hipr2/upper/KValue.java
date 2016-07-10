@@ -3,15 +3,20 @@ package net.joshuahughes.hipr2.upper;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.io.Serializable;
 
 /**
  * Interface for selecting the unsharp k value.
  *
  * @author Simon Horne.
  */
-public class KValue {
+public class KValue implements Serializable{
 
-  private JPanel p;
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+private JPanel p;
   private JLabel l;
   private JTextField t;
   /**

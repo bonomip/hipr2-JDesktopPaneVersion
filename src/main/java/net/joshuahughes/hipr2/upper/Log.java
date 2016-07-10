@@ -3,15 +3,20 @@ package net.joshuahughes.hipr2.upper;
 import java.lang.Math.*;
 import java.awt.*;
 import java.awt.Color.*;
+import java.io.Serializable;
 
 /**
  * The laplacian of Gaussian operator code.
  *
  * @author Simon Horne.
  */
-public class Log{
+public class Log implements Serializable{
 
   /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+/**
    * A convolution operator.
    */
   Convolution convolution;

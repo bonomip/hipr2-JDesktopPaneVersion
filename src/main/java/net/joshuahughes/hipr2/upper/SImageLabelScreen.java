@@ -4,6 +4,7 @@ package net.joshuahughes.hipr2.upper;
 import java.applet.*;
 import java.awt.*;
 import java.awt.image.*;
+import java.io.Serializable;
 import java.awt.Color;
 import java.net.*;
 import javax.swing.*;
@@ -22,9 +23,14 @@ import java.awt.event.*;
  *@author Neil Brown, DAI
  *@author Timothy Sharman
  */
-public class SImageLabelScreen extends VisionApplet1 {
+public class SImageLabelScreen extends VisionApplet1 implements Serializable{
 
-  //The operator class for performing image logical Label. It's a thread
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+//The operator class for performing image logical Label. It's a thread
   ImageLabel imageLabel;
   
   //The listeners for the GUI

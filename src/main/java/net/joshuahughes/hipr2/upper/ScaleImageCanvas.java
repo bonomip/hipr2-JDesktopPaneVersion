@@ -4,6 +4,7 @@ import java.applet.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.awt.image.*;
+import java.io.Serializable;
 import java.awt.Color;
 import java.net.*;
 
@@ -12,9 +13,13 @@ import java.net.*;
  * easy selection of the area to expand.
  */
 
-public class ScaleImageCanvas extends NoScaleImageCanvas {
+public class ScaleImageCanvas extends NoScaleImageCanvas implements Serializable{
 
-  public int x, y;  // top left corner of selected area
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+public int x, y;  // top left corner of selected area
   public int width, height; // Size of the selected area
   public float ratio; // ratio between displayed and actual size of image
   public Point point = null;

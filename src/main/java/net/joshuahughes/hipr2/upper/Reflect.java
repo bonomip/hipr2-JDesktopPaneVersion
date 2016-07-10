@@ -14,9 +14,14 @@ import java.lang.Math;
  * @see code.iface.reflect
  */
 
-public class Reflect extends Thread {
+public class Reflect extends Thread implements Serializable{
 
-  public Reflect() {
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+public Reflect() {
   }
 
 

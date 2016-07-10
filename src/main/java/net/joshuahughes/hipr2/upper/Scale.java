@@ -14,9 +14,14 @@ import java.lang.Math;
  * @see code.iface.scale
  */
 
-public class Scale extends Thread {
+public class Scale extends Thread implements Serializable{
   
-  public Scale() {
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+public Scale() {
   }
   
   private int [] gradeline(int end1, int end2, int scalef) {

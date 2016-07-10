@@ -4,6 +4,7 @@ package net.joshuahughes.hipr2.upper;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.image.*;
+import java.io.Serializable;
 import java.awt.event.*;
 import java.net.*;
 import java.awt.color.*;
@@ -15,9 +16,13 @@ import java.awt.color.*;
  *
  * @author Simon Horne.
  */
-public class SingleBinaryImageInterface extends SingleInputImageInterface{
+public class SingleBinaryImageInterface extends SingleInputImageInterface implements Serializable{
 
   /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+/**
    * The efficient representation of a binary image.
    */
   public BinaryFast binary;

@@ -2,6 +2,7 @@ package net.joshuahughes.hipr2.upper;
 
 import java.awt.*;
 import java.awt.image.*;
+import java.io.Serializable;
 import java.awt.Color;
 import java.net.*;
 
@@ -10,9 +11,13 @@ import java.net.*;
  * easy selection of the axis of reflection.
  */
 
-public class ReflectImageCanvas extends NoScaleImageCanvas {
+public class ReflectImageCanvas extends NoScaleImageCanvas implements Serializable{
 
-  public int x, y;  // point axis passes through
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+public int x, y;  // point axis passes through
   public double angle; // Angle of axis WRT X axis
   public float ratio; // ratio between displayed and actual size of image
 

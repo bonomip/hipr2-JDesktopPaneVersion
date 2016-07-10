@@ -3,14 +3,19 @@ package net.joshuahughes.hipr2.upper;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.io.Serializable;
 import java.net.*;
 
 /**
  * Interface for the laplacian kernel type selection.
  */
-public class KernelType {
+public class KernelType implements Serializable{
 
-  private JPanel p;
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+private JPanel p;
   private JLabel l;
   private int t = 1;
 
