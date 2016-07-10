@@ -59,11 +59,11 @@ public class imageLoad extends operator1DInt implements Serializable{
   /**
    * The newly loaded image.
    */
-  Image displayImage;
+  transient Image displayImage; //TODO
   /**
    * Icon for displaying the image on the screen.
    */
-  ImageIcon imageIcon;
+  ImageIcon imageIcon; 
   /**
    * The label for the icon, for displaying the image.
    */
@@ -106,7 +106,7 @@ public class imageLoad extends operator1DInt implements Serializable{
    * tableau document base URL 
    */
   static URL localdocbase;
-
+  
   /**
    * Constructor for creating a new imageLoad when one is selected from
    * the menu system.
@@ -434,9 +434,14 @@ public class imageLoad extends operator1DInt implements Serializable{
    * class for getting the current pixel position in the image canvas
    */
   
- public class PixelListener extends MouseMotionAdapter {
+ public class PixelListener extends MouseMotionAdapter implements Serializable{
     
-    //Used to try and find the intensity value at a point on the interface
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	//Used to try and find the intensity value at a point on the interface
     
     public void mouseDragged(MouseEvent e) {
       NoScaleImageCanvas ic = (NoScaleImageCanvas)e. getSource();

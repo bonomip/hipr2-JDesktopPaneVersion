@@ -109,7 +109,7 @@ public class imageDisplay extends operator1DInt implements Serializable{
   /**
    * The displayed image
    */
-  Image displayImage;
+  transient Image displayImage; //TODO
   /**
    * The icon, for the displayed image 
    */
@@ -377,9 +377,14 @@ public class imageDisplay extends operator1DInt implements Serializable{
  /**
    * class for getting the current pixel position in the image canvas
    */
- public class PixelListener extends MouseMotionAdapter {
+ public class PixelListener extends MouseMotionAdapter implements Serializable{
     
-    //Used to try and find the intensity value at a point on the interface
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	//Used to try and find the intensity value at a point on the interface
     
     public void mouseDragged(MouseEvent e) {
       NoScaleImageCanvas ic = (NoScaleImageCanvas)e. getSource();

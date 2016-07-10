@@ -1,3 +1,4 @@
 1: if you open a JInternalFrame open yet, it do nothing. I want that it show to user it
-2: all object Must implements Serializable
+2: after the load no box can move
+	-lower: imageDisplay & imageLoad have the field "image" transient
 3: Digital filters and other don't show their option Box
