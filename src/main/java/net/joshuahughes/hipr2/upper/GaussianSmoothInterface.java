@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.awt.image.*;
+import java.io.Serializable;
 
 /**
  * GaussianSmoothInterface is the user interface to the Gaussian
@@ -11,8 +12,12 @@ import java.awt.image.*;
  *
  * @author Simon Horne
  */
-public class GaussianSmoothInterface extends SingleInputImageInterface{
+public class GaussianSmoothInterface extends SingleInputImageInterface implements Serializable{
   /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+/**
    * The interface for selecting the kernel size.
    */
   KernelSize kernel;

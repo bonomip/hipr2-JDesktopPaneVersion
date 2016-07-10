@@ -16,9 +16,13 @@ import java.lang.Math.*;
  *@see code.iface.equalize
  */
 
-public class HistEqualize extends Thread{
+public class HistEqualize extends Thread implements Serializable{
   
-  //width and height of the image
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+//width and height of the image
   private int i_w=0;
   private int i_h=0;
  

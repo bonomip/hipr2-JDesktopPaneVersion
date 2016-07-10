@@ -18,9 +18,13 @@ import java.io.*;
  *@see code.iface.affine
  */
 
-public class Affine extends Thread{
+public class Affine extends Thread implements Serializable{
 
-  //the width of the input images in pixels
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+//the width of the input images in pixels
   private int i1_w;   //The width of the input image - currently unused
   private int i2_w;   //The height of the input image - currently unused
 

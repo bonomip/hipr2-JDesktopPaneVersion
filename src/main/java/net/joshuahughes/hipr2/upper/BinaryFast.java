@@ -2,6 +2,7 @@ package net.joshuahughes.hipr2.upper;
 
 import java.awt.Color;
 import java.awt.Point;
+import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Iterator;
 
@@ -17,9 +18,13 @@ import net.joshuahughes.hipr2.lower.image2DInt;
  *
  * @author Simon Horne.
  */
-public class BinaryFast extends image{
+public class BinaryFast extends image implements Serializable{
   
   /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+/**
    * Background is black.
    */
   public static final int background = (new Color(0,0,0)).getRGB();

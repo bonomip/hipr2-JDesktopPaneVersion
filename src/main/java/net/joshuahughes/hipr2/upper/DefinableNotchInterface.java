@@ -4,6 +4,7 @@ package net.joshuahughes.hipr2.upper;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.io.Serializable;
 
 /**
  * Class containing the GUI for the DefinableNotch operator, for inclusion
@@ -11,9 +12,13 @@ import java.awt.event.*;
  *
  * @author Simon Horne.
  */
-public class DefinableNotchInterface {
+public class DefinableNotchInterface implements Serializable{
 
-  private JPanel p;
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+private JPanel p;
   private JLabel x1l,y1l,x2l,y2l;
   public JTextField x1tf,y1tf,x2tf,y2tf;
   public JButton notchButton, notchKeepButton;

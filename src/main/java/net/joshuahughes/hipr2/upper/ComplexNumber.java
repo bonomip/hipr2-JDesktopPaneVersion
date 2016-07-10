@@ -1,5 +1,6 @@
 package net.joshuahughes.hipr2.upper;
 
+import java.io.Serializable;
 import java.lang.Math.*;
 
 /**
@@ -7,8 +8,12 @@ import java.lang.Math.*;
  *
  * @author Simon Horne.
  */
-public class ComplexNumber{
+public class ComplexNumber implements Serializable{
   /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+/**
    * The real part of the complex number.
    */
   public double real;

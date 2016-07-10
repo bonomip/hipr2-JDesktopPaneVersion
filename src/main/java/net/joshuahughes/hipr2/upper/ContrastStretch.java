@@ -15,9 +15,13 @@ import java.util.*;
  *@see code.iface.contrast
  */
 
-public class ContrastStretch extends Thread{
+public class ContrastStretch extends Thread implements Serializable{
   
-  //width and height of the image
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+//width and height of the image
   private int i_w=0;
   private int i_h=0;
  

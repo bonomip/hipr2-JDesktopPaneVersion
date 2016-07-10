@@ -1,9 +1,15 @@
 package net.joshuahughes.hipr2.upper;
 
 import java.awt.*;
+import java.io.Serializable;
 
-public class Classify{
+public class Classify implements Serializable{
   /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+/**
    * Takes a pixel grey-level and an array of classifications
    * returns a value between 1 and the number of classifications
    * if the pixel value falls inside a classification and 0 if

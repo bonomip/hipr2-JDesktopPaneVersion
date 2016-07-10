@@ -4,6 +4,7 @@ package net.joshuahughes.hipr2.upper;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.io.Serializable;
 
 /**
  * The interace for the frequency filter operator, for inclusion in the 
@@ -11,9 +12,13 @@ import java.awt.event.*;
  *
  * @author Simon Horne.
  */
-public class FreqFilterInterface {
+public class FreqFilterInterface implements Serializable{
 
   /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+/**
    * false = high pass filter, true = low pass filter.
    */
   private boolean removeHigh;

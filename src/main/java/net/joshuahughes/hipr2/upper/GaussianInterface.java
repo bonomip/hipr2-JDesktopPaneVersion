@@ -4,6 +4,7 @@ package net.joshuahughes.hipr2.upper;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.io.Serializable;
 
 /**
  * The interface for the Gaussian smoothing operator for inclusion in the
@@ -11,9 +12,13 @@ import java.awt.event.*;
  *
  * @author Simon Horne.
  */
-public class GaussianInterface {
+public class GaussianInterface implements Serializable{
 
-  private JPanel p;
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+private JPanel p;
   private JLabel sizel,xl,yl;
   private JTextField sizetf,xtf,ytf;
   JButton smooth;

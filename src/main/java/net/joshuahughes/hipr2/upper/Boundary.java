@@ -13,8 +13,12 @@ import java.io.*;
  * @author Nathalie Cammas
  */
 
-public class Boundary extends Thread{
+public class Boundary extends Thread implements Serializable{
   /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+/**
    * The output binary image
    */
   int [] output;

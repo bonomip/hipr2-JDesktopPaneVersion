@@ -9,15 +9,20 @@ import java.awt.image.*;
 //import code.iface.common.*;
 //import code.iface.kernels.*;
 //import code.operator.consmooth.*;
+import java.io.Serializable;
 
 /**
  *ConSmooth Interface is the user interface to the conservative
  *smoothing algorithm. 
  * @author Simon Horne
  */
-public class ConSmoothInterface extends SingleInputImageInterface{
+public class ConSmoothInterface extends SingleInputImageInterface implements Serializable{
 
   /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+/**
    * The interface for the on/off kernel.
    */
   TwoState3x3Kernel mask;

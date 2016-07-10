@@ -2,15 +2,21 @@ package net.joshuahughes.hipr2.upper;
 
 import java.lang.Math.*;
 import java.awt.*;
+import java.io.Serializable;
 
 /**
  * Class containing method to apply a rectangular notch filter to an image.
  *
  * @author Simon Horne.
  */
-public class DefinableNotch{
+public class DefinableNotch implements Serializable{
 
   /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+/**
    * Method to apply a rectangular notch filter to an image.
    *
    * @param input TwoDArray representing image.

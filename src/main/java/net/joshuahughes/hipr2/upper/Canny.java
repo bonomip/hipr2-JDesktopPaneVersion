@@ -16,11 +16,16 @@ import java.util.Stack.*;
  *@see code.iface.canny
  */
 
-public class Canny extends Thread{
+public class Canny extends Thread implements Serializable{
 
   //the Gaussian smoothing operator used as part of the process.
 
-  GaussianSmooth gaussiansmooth;
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+GaussianSmooth gaussiansmooth;
  
   //The Contrast stretching operator used as part of the process
 

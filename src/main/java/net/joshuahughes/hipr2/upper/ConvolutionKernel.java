@@ -3,6 +3,7 @@ package net.joshuahughes.hipr2.upper;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.io.Serializable;
 import java.awt.color.*;
 
 /**
@@ -10,9 +11,13 @@ import java.awt.color.*;
  *
  * @author Simon Horne.
  */
-public class ConvolutionKernel{
+public class ConvolutionKernel implements Serializable{
 
   /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+/**
    * Panel for inclusion in the convolution GUI.
    */
   JPanel panel;

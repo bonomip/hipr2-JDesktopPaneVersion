@@ -15,9 +15,14 @@ import java.awt.Color.*;
  *
  * @author Simon Horne.
  */
-public class ConSmooth extends Thread {
+public class ConSmooth extends Thread implements Serializable{
 
   /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+/**
    * Default no-arg constructor.
    */
   public ConSmooth() {

@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.awt.image.*;
+import java.io.Serializable;
 
 
 /**
@@ -11,9 +12,13 @@ import java.awt.image.*;
  *
  * @author Simon Horne.
  */
-public class DilateInterface extends SingleBinaryImageInterface{
+public class DilateInterface extends SingleBinaryImageInterface implements Serializable{
 
   /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+/**
    * Interface for kernel selection.
    */
   TwoState3x3Kernel mask;

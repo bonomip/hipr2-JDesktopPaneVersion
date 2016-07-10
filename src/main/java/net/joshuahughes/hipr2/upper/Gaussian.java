@@ -2,14 +2,20 @@ package net.joshuahughes.hipr2.upper;
 
 import java.lang.Math.*;
 import java.awt.*;
+import java.io.Serializable;
 
 /**
  * Class containing method to apply a gaussian filter to an image.
  *
  * @author Simon Horne.
  */
-public class Gaussian{
+public class Gaussian implements Serializable{
    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+/**
    * Method to apply a gaussian filter to an image.
    *
    * @param input TwoDArray representing the image.

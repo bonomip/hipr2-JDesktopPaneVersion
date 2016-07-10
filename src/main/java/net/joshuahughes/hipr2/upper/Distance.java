@@ -14,8 +14,12 @@ import java.lang.Math;
  *
  * @author Simon Horne.
  */
-public class Distance extends Thread {
+public class Distance extends Thread implements Serializable{
   /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+/**
    * 2D array representing the new grey level image produced.
    */
   int [][] greyLevel;

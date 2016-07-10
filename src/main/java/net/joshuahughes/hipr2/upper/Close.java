@@ -14,9 +14,14 @@ import java.lang.Math;
  *
  * @author Simon Horne.
  */
-public class Close extends Thread {
+public class Close extends Thread implements Serializable{
 
   /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+/**
    * Default no-arg constructor.
    */
   public Close() {

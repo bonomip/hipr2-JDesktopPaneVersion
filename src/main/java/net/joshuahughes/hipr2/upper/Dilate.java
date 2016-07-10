@@ -14,8 +14,13 @@ import java.lang.Math;
  * @author Craig Strachan
  * @author Judy Robertson, SELLIC Online
  */
-public class Dilate extends Thread {
+public class Dilate extends Thread implements Serializable{
   /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+/**
    * Default no-arg constructor.
    */
   public Dilate() {

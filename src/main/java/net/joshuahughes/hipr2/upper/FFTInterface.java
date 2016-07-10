@@ -4,6 +4,7 @@ package net.joshuahughes.hipr2.upper;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.image.*;
+import java.io.Serializable;
 import java.awt.event.*;
 import java.net.*;
 import java.awt.color.*;
@@ -17,10 +18,19 @@ import java.awt.color.*;
  *
  * @author Simon Horne.
  */
-public class FFTInterface extends SingleInputImageInterface{
+public class FFTInterface extends SingleInputImageInterface implements Serializable{
 
-public class verticalAxis extends JPanel{
-    int size;
+/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+public class verticalAxis extends JPanel implements Serializable{
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	int size;
     public verticalAxis(int size){
       this.size = size;
     }
@@ -45,7 +55,11 @@ public class verticalAxis extends JPanel{
 }
 
   public class horizontalAxis extends JPanel{
-    int size;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	int size;
     public horizontalAxis(int size){
       this.size = size;
     }

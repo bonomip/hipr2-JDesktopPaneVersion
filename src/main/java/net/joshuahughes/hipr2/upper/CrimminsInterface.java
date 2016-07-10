@@ -8,15 +8,20 @@ import java.awt.image.*;
 //import code.iface.highlevel.*;
 //import code.iface.common.*;
 //import code.operator.crimmins.*;
+import java.io.Serializable;
 
 /**
  * CrimminsInterface is the user interface to the 
  * Crimmins Speckle Reduction algorithm. 
  * @author Simon Horne
  */
-public class CrimminsInterface extends SingleInputImageInterface{
+public class CrimminsInterface extends SingleInputImageInterface implements Serializable{
 
-  Crimmins crimmins;
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+Crimmins crimmins;
   /**
    * The interface for entering the number of iterations.
    */

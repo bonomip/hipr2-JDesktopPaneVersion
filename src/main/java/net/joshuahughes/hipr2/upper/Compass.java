@@ -14,9 +14,14 @@ import java.awt.Color.*;
  *@see code.iface.compass
  */
 
-public class Compass extends Thread{
+public class Compass extends Thread implements Serializable{
 
-  //the Convolution operator used as part of the process.
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+//the Convolution operator used as part of the process.
 
   Convolution convolution;
 

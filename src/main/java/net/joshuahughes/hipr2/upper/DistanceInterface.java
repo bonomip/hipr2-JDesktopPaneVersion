@@ -5,6 +5,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.awt.image.*;
+import java.io.Serializable;
 //import code.iface.highlevel.*;
 //import code.iface.common.*;
 //import code.operator.distanceTransform.*;
@@ -14,8 +15,12 @@ import java.awt.image.*;
  *
  * @author Simon Horne.
  */
-public class DistanceInterface extends SingleBinaryImageInterface{
+public class DistanceInterface extends SingleBinaryImageInterface implements Serializable{
   /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+/**
    * Distance transform operator.
    */
   Distance distance;

@@ -14,9 +14,14 @@ import java.util.Arrays.*;
  *@see code.iface.adapthresh	
  */
 
-public class AdapThresh extends Thread{
+public class AdapThresh extends Thread implements Serializable{
 
-  //the width and height of this image in pixels
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+//the width and height of this image in pixels
   private int i_w, i_h;
   
   //pixel arrays for input and output images

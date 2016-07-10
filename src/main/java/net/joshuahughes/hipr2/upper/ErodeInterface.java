@@ -9,6 +9,7 @@ import java.awt.image.*;
 //import code.iface.highlevel.*;
 //import code.iface.kernels.*;
 //import code.operator.erode.*;
+import java.io.Serializable;
 
 /**
  * DilateInterface is the user interface to the Dilate algorithm.
@@ -16,9 +17,13 @@ import java.awt.image.*;
  * @author Simon Horne.
  */
 
-public class ErodeInterface extends SingleBinaryImageInterface{
+public class ErodeInterface extends SingleBinaryImageInterface implements Serializable{
 
   /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+/**
    * The interface for the kernel.
    */
   TwoState3x3Kernel mask;

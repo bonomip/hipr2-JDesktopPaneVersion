@@ -15,9 +15,14 @@ import java.awt.Color.*;
  *
  * @author Simon Horne.
  */
-public class GaussianSmooth extends Thread {
+public class GaussianSmooth extends Thread implements Serializable{
 
   /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+/**
    * Default no-args constructor.
    */
   public GaussianSmooth() {

@@ -44,10 +44,14 @@ import java.awt.image.*;
 // <P>
 // @see ToGif
 
-public class GifEncoder extends ImageEncoder
+public class GifEncoder extends ImageEncoder implements Serializable
     {
 
-    private boolean interlace = false;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private boolean interlace = false;
 
     /// Constructor from Image.
     // @param img The image to encode.

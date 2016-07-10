@@ -2,6 +2,7 @@ package net.joshuahughes.hipr2.upper;
 
 import java.lang.Math.*;
 import java.awt.*;
+import java.io.Serializable;
 
 /**
  * The FFT class contains methods to apply the 2D FFT to a
@@ -9,9 +10,13 @@ import java.awt.*;
  *
  * @author Simon Horne
  */
-public class FFT{
+public class FFT implements Serializable{
   
   /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+/**
    * Data structure to hold the input to the algorithm.
    */
   public TwoDArray input;

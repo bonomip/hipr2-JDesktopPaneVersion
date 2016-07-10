@@ -15,9 +15,14 @@ import java.lang.Math;
  * @author Craig Strachan
  * @author Judy Robertson, SELLIC Online
  */
-public class Erode extends Thread {
+public class Erode extends Thread implements Serializable{
 
   /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+/**
    * Default no-args constructor.
    */
   public Erode() {
