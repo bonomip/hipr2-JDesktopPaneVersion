@@ -50,7 +50,7 @@ public DesktopTest()
 		new ActionListener() {
 			public void actionPerformed(ActionEvent event){
 				JOptionPane.showMessageDialog(getContentPane()
-						, "Progetto creato da Nicola Landro, 2015", "About"
+						, "Progetto creato da Nicola Landro, 2016", "About"
 						,JOptionPane.INFORMATION_MESSAGE);			
 			}
 		} 
@@ -65,42 +65,45 @@ public DesktopTest()
    loadFrame.addActionListener(
 		   new ActionListener() {
 			   public void actionPerformed( ActionEvent event ) {
-				   ObjectInputStream stream;
-				try {
-					JFileChooser chooser = new JFileChooser();
-					chooser.removeChoosableFileFilter(chooser.getFileFilter());
-		   			chooser.addChoosableFileFilter(new FileNameExtensionFilter("HIPR2 ( *.HIPR2 )", "HIPR2"));
-		   			
-		   			chooser.showOpenDialog(null);
-					
-					stream = new ObjectInputStream(new FileInputStream(chooser.getSelectedFile()));
-					GUITotInternal g = (GUITotInternal) stream.readObject();
-					stream.close();
-					
-					g.setupMenuBar();
-					
-					JInternalFrame frame = g.getFrame();
-		            
-		            // attach panel to internal frame content pane   
-		            //Container container = frame.getContentPane();     
-
-		            // set size internal frame to size of its contents   
-		            frame.pack();   
-
-		            // attach internal frame to desktop and show it   
-		            theDesktop.add( frame );   
-		            frame.setVisible( true ); 
-					
-				} catch (FileNotFoundException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				} catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				} catch (ClassNotFoundException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
+//				ObjectInputStream stream;
+//				try {
+//					JFileChooser chooser = new JFileChooser();
+//					chooser.removeChoosableFileFilter(chooser.getFileFilter());
+//		   			chooser.addChoosableFileFilter(new FileNameExtensionFilter("HIPR2 ( *.HIPR2 )", "HIPR2"));
+//		   			
+//		   			chooser.showOpenDialog(null);
+//					
+//					stream = new ObjectInputStream(new FileInputStream(chooser.getSelectedFile()));
+//					GUITotInternal g = (GUITotInternal) stream.readObject();
+//					stream.close();
+//					
+//					g.setupMenuBar();
+//					
+//					JInternalFrame frame = g.getFrame();
+//		            
+//		            // attach panel to internal frame content pane   
+//		            //Container container = frame.getContentPane();     
+//
+//		            // set size internal frame to size of its contents   
+//		            frame.pack();   
+//
+//		            // attach internal frame to desktop and show it   
+//		            theDesktop.add( frame );   
+//		            frame.setVisible( true ); 
+//					
+//				} catch (FileNotFoundException e) {
+//					// TODO Auto-generated catch block
+//					e.printStackTrace();
+//				} catch (IOException e) {
+//					// TODO Auto-generated catch block
+//					e.printStackTrace();
+//				} catch (ClassNotFoundException e) {
+//					// TODO Auto-generated catch block
+//					e.printStackTrace();
+//				}
+				   JOptionPane.showMessageDialog(getContentPane()
+							, "Operazione Non ancora Implementata", "Working in progress"
+							,JOptionPane.INFORMATION_MESSAGE);
 				   
 			   }
 		   }

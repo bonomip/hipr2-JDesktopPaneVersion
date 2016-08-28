@@ -144,40 +144,44 @@ public void setupMenuBar(){
 	    fileSaveMenuItem. addActionListener(new ActionListener(){
 	      public void actionPerformed(ActionEvent e){
 	    	 
-	    	  JFileChooser chooser = new JFileChooser();
-				//Set estensione
-				chooser.removeChoosableFileFilter(chooser.getFileFilter());
-	   			chooser.addChoosableFileFilter(new FileNameExtensionFilter("HIPR2 ( *.HIPR2 )", "HIPR2"));
-	   			
-	   			//set nome di base
-	   			//FileNameExtensionFilter extensionFile = (FileNameExtensionFilter) chooser.getFileFilter();
-	   		    chooser.setSelectedFile(new File("nuovo.HIPR2"));
-				
-				chooser.showSaveDialog(null);
-				
-				File f = chooser.getSelectedFile();
+//	    	  JFileChooser chooser = new JFileChooser();
+//				//Set estensione
+//				chooser.removeChoosableFileFilter(chooser.getFileFilter());
+//	   			chooser.addChoosableFileFilter(new FileNameExtensionFilter("HIPR2 ( *.HIPR2 )", "HIPR2"));
+//	   			
+//	   			//set nome di base
+//	   			//FileNameExtensionFilter extensionFile = (FileNameExtensionFilter) chooser.getFileFilter();
+//	   		    chooser.setSelectedFile(new File("nuovo.HIPR2"));
+//				
+//				chooser.showSaveDialog(null);
+//				
+//				File f = chooser.getSelectedFile();
+//	    	  	
+//				//salva
+//	    	  	try {
+//					salva(f);
+//					JOptionPane.showMessageDialog(getContentPane()
+//							, "Operazione effettuata con successo", "Working in progress"
+//							,JOptionPane.INFORMATION_MESSAGE);
+//				} catch (FileNotFoundException e1) {
+//					JOptionPane.showMessageDialog(getContentPane()
+//							, "Operazione Fallita", "Working in progress"
+//							,JOptionPane.INFORMATION_MESSAGE);
+//					// TODO Auto-generated catch block
+//					e1.printStackTrace();
+//				} catch (IOException e1) {
+//					JOptionPane.showMessageDialog(getContentPane()
+//							, "Operazione Fallita", "Working in progress"
+//							,JOptionPane.INFORMATION_MESSAGE);
+//					// TODO Auto-generated catch block
+//					e1.printStackTrace();
+//	    	  
+//	    	  
+//				}
 	    	  	
-				//salva
-	    	  	try {
-					salva(f);
-					JOptionPane.showMessageDialog(getContentPane()
-							, "Operazione effettuata con successo", "Working in progress"
-							,JOptionPane.INFORMATION_MESSAGE);
-				} catch (FileNotFoundException e1) {
-					JOptionPane.showMessageDialog(getContentPane()
-							, "Operazione Fallita", "Working in progress"
-							,JOptionPane.INFORMATION_MESSAGE);
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				} catch (IOException e1) {
-					JOptionPane.showMessageDialog(getContentPane()
-							, "Operazione Fallita", "Working in progress"
-							,JOptionPane.INFORMATION_MESSAGE);
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}
-	    	  	
-	    	  	
+	    	  JOptionPane.showMessageDialog(getContentPane()
+						, "Operazione Non ancora Implementata", "Working in progress"
+						,JOptionPane.INFORMATION_MESSAGE);
 				
 	    	  
 	      }
