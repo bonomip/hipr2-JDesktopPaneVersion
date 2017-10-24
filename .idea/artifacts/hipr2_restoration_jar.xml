@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="hipr2-restoration:jar">
+    <output-path>$PROJECT_DIR$/classes/artifacts/hipr2_restoration_jar</output-path>
+    <root id="archive" name="hipr2-restoration.jar">
+      <element id="module-output" name="hipr2-restoration" />
+    </root>
+  </artifact>
+</component>
