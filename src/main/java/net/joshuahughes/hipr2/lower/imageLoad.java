@@ -299,7 +299,7 @@ public class imageLoad extends operator1DInt implements Serializable{
 
   /**
    *Loads the given image and converts it into an image1dInt
-   *@param fileName the file containing the default image
+   *@param imageURL the file containing the default image
    */
   void setImage(URL imageURL){
 
@@ -357,21 +357,32 @@ public class imageLoad extends operator1DInt implements Serializable{
       setImage(theURL);
     } catch (MalformedURLException e) {
 
-	// if a file rather than a URL, then try local file space
-	// If still not a URL and not a file then report error
+        // if a file rather than a URL, then try local file space
+        // If still not a URL and not a file then report error
 
-	try {
-          String filename = new String(loadText.getText());
-	  URL theURL = new URL(docbase,"images/"+filename);
-	  setImage(theURL);
-	  file = new File(filename);
+        try {
+
+            String filename = new String(loadText.getText());
+            URL theURL = new URL("http://homepages.inf.ed.ac.uk/rbf/HIPR2/images/"+filename);
+            setImage(theURL);
+            file = new File(filename);
 
         } catch (MalformedURLException e4) {
-	  JOptionPane.showMessageDialog(null,("File not found"),
-				    "Load Error", JOptionPane.WARNING_MESSAGE);
-	  return;
+
+            try {
+                String filename = new String(loadText.getText());
+                URL theURL = new URL(docbase, "images/" + filename);
+                setImage(theURL);
+                file = new File(filename);
+
+            } catch (MalformedURLException e5) {
+
+                JOptionPane.showMessageDialog(null, ("File not found"),
+                        "Load Error", JOptionPane.WARNING_MESSAGE);
+                return;
+            }
         }
-      }
+    }
   }
 
   /**
