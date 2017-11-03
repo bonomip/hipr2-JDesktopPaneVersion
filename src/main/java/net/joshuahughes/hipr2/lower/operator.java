@@ -32,6 +32,7 @@ public abstract class operator implements Serializable{
    * The frame that contains the parameter window for this operator (made
    * visible by clicking on the operator name in the operatorBox on th UI).
    */
+  // FIXME gaussian 1.1 variable parameters
   protected JFrame parameters;
   /**
    * The type of operator (for example convolution).
@@ -87,6 +88,7 @@ public abstract class operator implements Serializable{
    * @param outputs the number of outputs from the operator (1 or 2)
    */
   protected void setBox(JPanel panel, linkData links, int inputs, int outputs){
+    // FIXME gaussian 2.0 setBox()
     box = new operatorBox(this,panel,links,inputs,outputs);
   }
   /**
@@ -111,6 +113,7 @@ public abstract class operator implements Serializable{
  
   private JInternalFrame p;
   public void setP(JInternalFrame frame){
+    //FIXME gaussian 2.2 SetP();
 	  p = frame;
 	  DesktopTest.addFrame(p);
 	  p.setContentPane(parameters.getContentPane());

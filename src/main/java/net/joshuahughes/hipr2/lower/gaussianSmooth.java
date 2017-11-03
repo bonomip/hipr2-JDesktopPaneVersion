@@ -18,9 +18,6 @@ import javax.swing.JTextField;
 
 import net.joshuahughes.hipr2.upper.GaussianSmooth;
 
-
-//TODO bugfix gaussian smooth
-
 public class gaussianSmooth extends operator1DInt implements Serializable{
 
   /**
@@ -30,6 +27,7 @@ public class gaussianSmooth extends operator1DInt implements Serializable{
 JLabel thetaLabel = new JLabel("Theta Value:");
   JTextField thetaText = new JTextField("0.4",5);
   JLabel kernelLabel = new JLabel("Kernel Size");
+  //FIXME gaussian 1.2 variable p
   JPanel  p = new JPanel();
   ButtonGroup group = new ButtonGroup();
   JRadioButton size3 = new JRadioButton("3x3");
@@ -97,7 +95,12 @@ JLabel thetaLabel = new JLabel("Theta Value:");
     saveData = " " + s + " " + theta;
     return saveData;
   }
-  
+
+
+
+
+
+
   void setParameters(){
     /**
      *This function is used to set up the parameters window. This window
@@ -108,8 +111,14 @@ JLabel thetaLabel = new JLabel("Theta Value:");
      *is created which is used to hold a label saying there are no paramters.
      *In general this will not be true of most operators.
      */
+
+    //FIXME gaussian 1.0 setParameters()
+
+    //GOTO: gaussian 2
     parameters = new JFrame(name);
     panel = new JPanel();
+
+    // GOTO: gaussian 3
     p.setLayout(new BoxLayout(p,BoxLayout.Y_AXIS));
     JButton applyButton = new JButton("Apply");
     panel.add(thetaLabel);
@@ -161,11 +170,16 @@ JLabel thetaLabel = new JLabel("Theta Value:");
       }
     }); 
     panel.add(applyButton);
-
     parameters.getContentPane().add(panel);
     parameters.pack();
     parameters.setVisible(false);
   }
+
+
+
+
+
+
 
   public void go(){
     

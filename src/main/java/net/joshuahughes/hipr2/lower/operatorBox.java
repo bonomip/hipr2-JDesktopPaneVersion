@@ -1,6 +1,5 @@
 package net.joshuahughes.hipr2.lower;
 
-import java.awt.color.*;
 import java.awt.*;
 import java.util.*;
 import java.awt.event.*;
@@ -9,9 +8,6 @@ import java.io.Serializable;
 import javax.swing.*;
 import javax.swing.event.*;
 
-import GUI.DesktopTest;
-
-import java.awt.event.*;
 import java.lang.*;
 
 public class operatorBox extends JPanel implements Serializable{
@@ -32,9 +28,14 @@ static ArrayList boxes = new ArrayList();
 
   public operatorBox(operator represents, 
 		      JPanel panel, linkData links, 
-		      int inputs, int outputs){
+		      int inputs, int outputs)
+  {
+
+    //FIXME 2.1 OperatoBox Constructor
+
     boxes.add(this);
     this.links = links;
+
     representsOperator = represents;
     
     representsOperator.setP(new JInternalFrame(representsOperator.getName(), true, true, true, true));
@@ -292,12 +293,17 @@ System.out.println("mouse press: "+((operatorBox) connection.getParent().getPare
     public void mouseClicked(MouseEvent e){
       if(SwingUtilities.isLeftMouseButton(e)){
 	//representsOperator.getParameters().setVisible(true);
-	//representsOperator.setP(DesktopTest.setFrame(representsOperator.getName(),representsOperator.getParameters()));
-	
+	//representsOperator.setP(DesktopTest.setFrame(representsOperator.getName(),representsOperator.getParameters())
+
+          // FIXME gaussian 3.0 Click Listener
+
+          System.out.println("Show operator option panel"+representsOperator.name);
+
     representsOperator.getP().setVisible(true);	  
     
     representsOperator.getParameters().setState(Frame.NORMAL);
 	Iterator it = boxes.iterator();
+
 	while(it.hasNext()){
 	  operatorBox box = (operatorBox) it.next();
 	}
@@ -305,6 +311,7 @@ System.out.println("mouse press: "+((operatorBox) connection.getParent().getPare
 	removeOperator();
       }
     }
+
     public void mouseDragged(MouseEvent e){
       operatorBox box = (operatorBox) ((JLabel) e.getSource()).getParent();
       Point oldLocation = new Point(box.getLocation());

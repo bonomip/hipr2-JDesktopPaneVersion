@@ -68,6 +68,7 @@ image1DInt temp;
   Image hist;
 
   public threshold(){
+
   }
 
   public threshold(JPanel panel, linkData links){
@@ -122,6 +123,9 @@ image1DInt temp;
     parameters.pack();
     parameters.setVisible(false);
   }
+
+
+
 
   
   void setParameters(){
@@ -278,6 +282,10 @@ image1DInt temp;
     parameters.pack();
     parameters.setVisible(false);
   }
+
+
+
+
 
   public void updateThreshold(int low, int high){
     if(histImage!=null){
