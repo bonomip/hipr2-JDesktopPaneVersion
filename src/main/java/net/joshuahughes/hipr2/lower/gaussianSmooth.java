@@ -19,6 +19,8 @@ import javax.swing.JTextField;
 import net.joshuahughes.hipr2.upper.GaussianSmooth;
 
 
+//TODO bugfix gaussian smooth
+
 public class gaussianSmooth extends operator1DInt implements Serializable{
 
   /**

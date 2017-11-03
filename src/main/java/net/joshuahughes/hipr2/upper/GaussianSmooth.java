@@ -15,6 +15,9 @@ import java.awt.Color.*;
  *
  * @author Simon Horne.
  */
+
+//TODO bugfix gaussian smooth
+
 public class GaussianSmooth extends Thread implements Serializable{
 
   /**
